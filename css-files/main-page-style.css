@@ -1,0 +1,380 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Balsamiq+Sans&display=swap');
+
+
+    
+/* sets the html and body to 100% for use in the css */
+body, html {
+    min-width: 375px;
+    padding: 0;
+    background-color: #FBEEC1 !important;
+    margin: 8px;
+    
+    
+}
+
+nav {
+    min-width: 375px;
+    width: calc(100% + 8px) !important;
+    margin: -8px 0 0 -4px;
+    background-color: #548DBD !important;
+    -webkit-box-shadow: 0px 5px 5px 5px rgba(0, 0, 0,1);
+            box-shadow: 0px 5px 5px 5px rgba(0, 0, 0,1);
+}
+
+
+
+/* This class is used for all images on the page which don't have any text hovering on them */
+.background {
+    opacity: 0.9;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 375px;
+    width:100%;
+   
+    min-height: 350px;
+    animation-delay: 0.2s;
+
+} 
+
+.background > div {
+    display: inline-block;
+    min-width: 350px;
+    height: 80%;
+    width:  65%;
+    top: 20%;
+    margin: 5% auto;
+    border-radius: 10px 10px;
+      -webkit-box-shadow: 0px 70px 113px 10px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 0px 20px 70px 10px rgba(0,0,0,0.75) !important;
+    box-shadow: 0px 20px 70px 10px rgba(0,0,0,0.75) !important;
+    padding: 6px;
+}
+
+.background > div > p {
+    display: inline-block;
+    text-align: center;
+    padding: 0 1% 0 1%;
+    width:100% ;
+    vertical-align: top;
+    font-size: max(1.75vw, 22px);
+    
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+    /*font-weight: bold;*/
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+/* centering the skills bullets */
+#skills_bullets_wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    min-height: 150px;
+    
+}
+
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+}
+
+@media (min-width:100px) and (max-width: 797px) {
+    #skills_bullets_wrapper {
+        flex-direction: column;
+    }
+    .flex_container{
+        width:100%;
+    }
+    
+}
+.skills_bullets_buble_wrapper{
+    cursor: pointer;
+    width: 50%;
+    height: 100%;   
+}
+
+.skills_bullets{
+    display: block;
+    margin-bottom: calc(13% - 8px);
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
+    width: 70%;
+    height: 80%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border: 8px solid #DAAD86;
+    text-align: center;
+
+    
+}
+.tooltiptext {
+    position: relative;
+    display: inline;
+  opacity: 0.0;
+    right: 10%;
+    bottom: 15px;
+  background-color: lightyellow;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: max(1.5vw,18px);
+  text-shadow:
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
+  
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border: 5px solid #659EBC;
+  padding: 6% 6%;
+  /* Position the tooltip text - see examples below! */
+  
+  z-index: 1;
+  font-family:  'Baloo Paaji 2', cursive;
+ 
+}
+.tooltiptext > span {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.tooltiptext > span:before{
+content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 50px;
+  bottom: -32px;
+  border: 16px solid;
+  border-color: #659EBC #659EBC transparent transparent;
+}
+.tooltiptext > span:after{
+content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 58px;
+  bottom: -16px;
+  border: 8px solid;
+  border-color: lightyellow lightyellow transparent transparent;
+}
+
+
+.FadeIn {
+-webkit-animation:FadeIn 1s forwards;
+        animation:FadeIn 1s forwards;
+}
+.FadeOut {
+-webkit-animation:FadeOut 1s forwards;
+        animation:FadeOut 1s forwards;
+}
+
+@-webkit-keyframes FadeIn {
+from {opacity: 0.0;}
+to {opacity: 1.0;}
+}
+
+@keyframes FadeIn {
+from {opacity: 0.0;}
+to {opacity: 1.0;}
+}
+@-webkit-keyframes FadeOut {
+from {opacity: 1.0;}
+to {opacity: 0.0};
+}
+@keyframes FadeOut {
+from {opacity: 1.0;}
+to {opacity: 0.0};
+}
+.getSmaller {
+    -webkit-animation-name: GetSmaller;
+    
+    animation-name: GetSmaller;
+-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+-webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.getMoreSmaller {
+    
+    -webkit-animation-name: GetMoreSmall;
+    
+    animation-name: GetMoreSmall;
+-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+-webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+}
+/* style for skills bullets */
+
+
+.skills_bullets_buble_wrapper:hover {
+    -webkit-animation-name: GetBigger;
+            animation-name: GetBigger;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes GetBigger {
+    from {-webkit-transform: scale(1,1);transform: scale(1,1);}
+    to {-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+}
+
+@keyframes GetBigger {
+    from {-webkit-transform: scale(1,1);transform: scale(1,1);}
+    to {-webkit-transform: scale(1.2,1.2);transform: scale(1.2,1.2);}
+}
+@-webkit-keyframes GetSmaller {
+    from {-webkit-transform:scale(1.2);transform:scale(1.2);}
+    to {-webkit-transform:scale(1.0);transform:scale(1.0);}
+}
+@keyframes GetSmaller {
+    from {-webkit-transform:scale(1.2);transform:scale(1.2);}
+    to {-webkit-transform:scale(1.0);transform:scale(1.0);}
+}
+
+/* sytle for the overall profile box */
+#profile_box {
+    min-width:350px; 
+    display: table;
+    width: 50%;
+    background-color:#BC986A;
+    border-radius: 10px;
+    margin: 3% auto;
+    text-align: center;
+    color: white;
+}
+
+.profile_box_item{
+    display: table-row;
+    padding: 5px;
+    height: 5vh;
+    
+}
+.profile_box_item > div {
+    display: table;
+    width: 100%;
+    
+}
+.profile_box_item > div > span {
+    display: table-cell;
+    width: 50%;
+    font-size: max(1.5vw,14px);
+}
+
+.profile_box_item > h4 {
+    font-size: max(2vw, 30px);
+    
+}
+.profile_box_item > h6 {
+    font-size: max(1.5vw, 18px);
+    
+}
+.profile_box_item > a,
+.profile_box_item > a > img{
+    margin-top: 3%;
+    margin-left: 1%;
+    display: inline-block;
+    width: max(3vw, 35px);
+    height: max(3vw,35px);
+}
+.profile_box_item > a:nth-child(1) > img {
+    width: max(3.5vw, 35px);
+    height: max(3.5vw,35px);
+}
+
+#cv {
+    cursor: pointer;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 7%;
+    right: 5%;
+    border-radius: 50px;
+     -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border: 1px solid green;
+    
+ 
+}
+
+#cv:hover {
+    -webkit-animation-name: GetMoreBigger;
+            animation-name: GetMoreBigger;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.Spin{
+    
+    -webkit-animation:NameSpin 5s 1;
+            animation:NameSpin 5s 1;
+            animation-delay: 3s;
+}
+
+@-webkit-keyframes GetMoreBigger {
+    from {-webkit-transform: scale(1,1);transform: scale(1,1);}
+    to {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
+}
+@keyframes GetMoreBigger {
+    from {-webkit-transform: scale(1,1);transform: scale(1,1);}
+    to {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
+}
+@-webkit-keyframes GetMoreSmall {
+    from {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
+    to {-webkit-transform: scale(1,1);transform: scale(1,1);}
+}
+@keyframes GetMoreSmall {
+    from {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
+    to {-webkit-transform: scale(1,1);transform: scale(1,1);}
+}
+
+
+@-webkit-keyframes NameSpin
+{
+    0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    25% { left:15vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
+    50% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
+}
+@keyframes NameSpin
+{
+    0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    25% { left:15vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
+    50% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:90%;}
+    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
+}

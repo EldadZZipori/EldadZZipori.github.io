@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Eldad Zipori</title>    
+
+        <!-- CSS files
+            1. Bootstrap's stylesheet
+            2. Main page stylesheet
+            3. Main page stylesheet for tablets and phone
+        -->
+        
+        <link rel="stylesheet" href="/live_cv_site/css-files/main-page-style.css" />
+       <link rel="stylesheet" href="/live_cv_site/css-files/tooltip-style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+        
+        <!-- Rive-Flare Scripts -->
+        <script src="/live_cv_site/dependencies/rive-build/Flare.min.js"></script>
+        <script src="/live_cv_site/dependencies/rive-build/gl-matrix.js"></script>
+        <script src="/live_cv_site/dependencies/rive-build/canvaskit.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        
+        <script src="/live_cv_site/javascript-files/rive-conlroller.js"></script>
+        
+    </head>
+    <body>
+        <!-- Placeholder for navbar from navbar_tamplate.html - JS will load nav onload -->
+        <span id="navbar_placeholder">
+             <nav>
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo center Spin" id="brand_logo_main">Eldad Zipori</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">&#9776;</i></a>
+                  <ul class=" hide-on-med-and-down">
+                        <li class="active">
+                            <a href="/live_cv_site/index.html">Home </a>
+                        </li>
+                        <li >
+                            <a href="/live_cv_site/timeline.html">Timeline</a>
+                        </li>
+                        <li >
+                            <a href="/live_cv_site/gallery-page.html">Projects</a>
+                        </li>
+                  </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-demo">
+                <li> <a href="/live_cv_site/index.html">Home </a></li>
+                <li><a href="/live_cv_site/timeline.html">Timeline</a></li>
+                <li><a c href="/live_cv_site/gallery-page.html">Projects</a></li>
+            </ul>
+
+
+
+        </span>
+        
+        <!-- Top image box -->
+        <div class="background" id="main_background" style="visibility: hidden;">
+            <div>
+                <p>Today's world needs people.<br> Not just <b>"Programmers"</b> or <b>"Engineers"</b>.<br> I invite you to explore my life and my various interests.<br> Not only Technology but topics from Management to Humanities.<br><b>You and your company need a round character.</b></p>
+            </div>
+        </div>
+        
+        <!-- Contains the bubles/ bullets of expertice and topcis of intersts / skills -->
+        <div id="skills_bullets_wrapper">
+            <div class="flex_container">
+                <div class="skills_bullets_buble_wrapper">
+                    <span class="tooltiptext"><span>Programing</span></span>
+                    <canvas id="ProgramingCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
+                    
+                </div>
+                <div class="skills_bullets_buble_wrapper">
+                   <span class="tooltiptext"><span>Electronics</span></span>
+                    <canvas id="ElectronicsCanvas" class="skills_bullets" id="second_circle"style="visibility: hidden;"></canvas>
+                </div>
+            </div>
+            <div class="flex_container">
+                <div class="skills_bullets_buble_wrapper">
+                    <span class="tooltiptext"><span>Managment</span></span>
+                    <canvas id="ManagmentCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
+                </div>
+                <div class="skills_bullets_buble_wrapper" >
+                    <span class="tooltiptext"><span>Much More</span></span>
+                    <canvas id ="MuchMorecanvas" class="skills_bullets" style="visibility: hidden;" data="0"></canvas>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Bottom image box - after skills bullets -->
+        <div class="background" id="secondery_backgroind" style=""></div>
+            
+         
+        <!-- Profile information box --> 
+        <div id="profile_box">
+            <!-- All the text in the profile information -->   
+            <div class="profile_box_item">
+                <h4>Eldad Zeev Zipori</h3>
+                <h6>Developer And Much More</h4>
+            </div>
+            <div class="profile_box_item">
+                <div>
+                <span>
+                    <b> Phone : </b><br> +972 543 100 725 <br><br>
+                    <b>Email :</b><br> eldad.z.zipori@gmail.com
+                </span>
+                <span>
+                       <b>Address :</b><br> Not Canada Yet,
+                       Israel
+                       <br><br>
+                       <b>Date of Birth :</b><br> 14<sup>th</sup> of April 1998
+                </span>
+                    </div>
+            </div>
+            <div class="profile_box_item">
+                    <a target="_blank"><img src="/live_cv_site/static/github_logo.png"></a>
+                    <a target="_blank"><img src="/live_cv_site/static/linkedin_logo.png"></a>
+                    <a target="_blank"  href="https://api.whatsapp.com/send?phone=972543100725&text=Hey%20Eldad,"><img src="/live_cv_site/static/whatsapplogo.png" ></a>
+            </div>
+        </div>
+                
+                
+        
+        <canvas id="cv" style="visibility: hidden;" ></canvas>
+        <!-- Scripts -->
+        
+         
+        <script src="/live_cv_site/javascript-files/main-page-script.js"></script>
+        
+        
+    </body>
+</html>
