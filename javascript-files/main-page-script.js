@@ -11,7 +11,8 @@ var ready = (callback) => {
             if(keys.length != 2){
                 cache.addAll([
                 'https://eldadzzipori.github.io/static/primary_background.jpg',
-                'https://eldadzzipori.github.io/static/secondary_backgroud.jpg'])
+                'https://eldadzzipori.github.io/static/secondary_backgroud.jpg']).then(() => loadPicsFromCache(cache));
+              return;
             }
             loadPicsFromCache(cache);
          });
