@@ -10,8 +10,8 @@ var ready = (callback) => {
             cache.keys().then((keys)=> {
             if(keys.length != 2){
                 cache.addAll([
-                'https://eldadzzipori.github.io/live_cv_site/static/primary_background.jpg',
-                'https://eldadzzipori.github.io/live_cv_site/static/secondary_backgroud.jpg'])
+                'https://eldadzzipori.github.io/static/primary_background.jpg',
+                'https://eldadzzipori.github.io/static/secondary_backgroud.jpg'])
             }
             loadPicsFromCache(cache);
          });
@@ -21,7 +21,7 @@ var ready = (callback) => {
  const loadPicsFromCache = async (cache) => {
     // if somehow the pictures cache doesn't have all the pictures fetch again
 
-    cache.match( 'https://eldadzzipori.github.io/live_cv_site/static/primary_background.jpg').then((r) => {
+    cache.match( 'https://eldadzzipori.github.io/static/primary_background.jpg').then((r) => {
 
         r.blob().then((value) => {
             let background = document.querySelector("#main_background");
@@ -29,7 +29,7 @@ var ready = (callback) => {
             background.className += " getSmaller";
         });
     });
-    cache.match( 'https://eldadzzipori.github.io/live_cv_site/static/secondary_backgroud.jpg').then((r) => {
+    cache.match( 'https://eldadzzipori.github.io/static/secondary_backgroud.jpg').then((r) => {
         r.blob().then((value) => {
             let background = document.querySelector("#secondery_backgroind");
             background.setAttribute("style", "background-image:url('"+ URL.createObjectURL(value) + "'");
@@ -47,7 +47,7 @@ const BackgroundLoaded = () => {
   let more_element = document.getElementById("MuchMorecanvas");
       MuchMore = new RivePlayer(more_element, function () {
 
-    MuchMore.load("/live_cv_site/static/books_rive.flr", function (error) {
+    MuchMore.load("/static/books_rive.flr", function (error) {
       more_element.setAttribute("style","");
       more_element.className += " getMoreSmaller";
       if (error) {
@@ -58,7 +58,7 @@ const BackgroundLoaded = () => {
 
   var programing_element = document.getElementById("ProgramingCanvas");
   Programing = new RivePlayer(programing_element, function () {
-    Programing.load("/live_cv_site/static/programming_rive.flr", function (error) {
+    Programing.load("/static/programming_rive.flr", function (error) {
       programing_element.setAttribute("style","");
       programing_element.className += " getMoreSmaller";
       if (error) {
@@ -69,7 +69,7 @@ const BackgroundLoaded = () => {
 
   var electronics_element = document.getElementById("ElectronicsCanvas");
   Electronics = new RivePlayer(electronics_element, function () {
-    Electronics.load("/live_cv_site/static/electronics_rive.flr", function (error) {
+    Electronics.load("/static/electronics_rive.flr", function (error) {
       electronics_element.setAttribute("style","");
       electronics_element.className += " getMoreSmaller";
       if (error) {
@@ -80,7 +80,7 @@ const BackgroundLoaded = () => {
 
   var managment_element = document.getElementById("ManagmentCanvas");
   Managment = new RivePlayer(managment_element, function () {
-    Managment.load("/live_cv_site/static/managment_rive.flr", function (error) {
+    Managment.load("/static/managment_rive.flr", function (error) {
       managment_element.setAttribute("style","");
       managment_element.className += " getMoreSmaller";
       if (error) {
@@ -90,7 +90,7 @@ const BackgroundLoaded = () => {
   }, "#ManagmentCanvas", [190, 160], 0.9, 0.010, [0.74, 0.59, 0.41, 1.0]);
   var cv_element = document.getElementById("cv");
   CV = new RivePlayer(cv_element, function () {
-    CV.load("/live_cv_site/static/cv_rive.flr", function (error) {
+    CV.load("/static/cv_rive.flr", function (error) {
         cv_element.setAttribute("style","");
         cv_element.className += "getMoreSmaller";
            if (error) {
