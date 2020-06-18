@@ -57,7 +57,7 @@ var RivePlayer = function () {
 
     var now = Date.now(); //elapsed = (now - _This._LastAdvanceTime)/1000.0;
 
-    elapsed = 0.010;
+    let elapsed = 0.010;
     _This._LastAdvanceTime = now;
     var actor = _This._ActorInstance;
 
