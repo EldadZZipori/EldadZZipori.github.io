@@ -46,7 +46,6 @@ nav {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 350px;
     width:100%;
    
     min-height: 350px;
@@ -57,7 +56,6 @@ nav {
 
 .background > div {
     display: inline-block;
-    min-width: 350px;
     height: 80%;
     width:  65%;
     top: 20%;
