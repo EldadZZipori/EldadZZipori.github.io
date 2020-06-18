@@ -318,12 +318,12 @@ to {opacity: 0.0};
     margin-top: 3%;
     margin-left: 1%;
     display: inline-block;
-    width: max(3vw, 35px);
-    height: max(3vw,35px);
+    width: max(3vw, 35px) !important;
+    height: max(3vw,35px) !important;
 }
 .profile_box_item > a:nth-child(1) > img {
-    width: max(3.5vw, 35px);
-    height: max(3.5vw,35px);
+    width: max(3.5vw, 35px) !important;
+    height: max(3.5vw,35px) !important;
 }
 
 #cv {
