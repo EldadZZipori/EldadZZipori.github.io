@@ -6,19 +6,21 @@
 */
 
 /* sets the html and body to 100% for use in the css */
-body, html {
+html {
     width: 100%;
+}
+body {
+    width:100%;
+    padding:8px;
+}
+body, html {
     height: 100%;
-    min-width: 375px;
-    padding: 0;
+    min-width: 350px;
     background-color: #FBEEC1 !important;
-    margin: 8px;
-    
-    
 }
 
 nav {
-    min-width: 375px;
+    min-width: 350px;
     width: calc(100% + 8px) !important;
     margin: -8px 0 0 -4px;
     background-color: #548DBD !important;
@@ -44,7 +46,7 @@ nav {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 375px;
+    min-width: 350px;
     width:100%;
    
     min-height: 350px;
