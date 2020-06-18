@@ -10,8 +10,8 @@ var ready = (callback) => {
             cache.keys().then((keys)=> {
             if(keys.length != 2){
                 cache.addAll([
-                'https://eldadzzipori.github.io/static/primary_background.jpg',
-                'https://eldadzzipori.github.io/static/secondary_backgroud.jpg']).then(() => loadPicsFromCache(cache));
+                'https://eldadzzipori.com/static/primary_background.jpg',
+                'https://eldadzzipori.com/static/secondary_backgroud.jpg']).then(() => loadPicsFromCache(cache));
               return;
             }
             loadPicsFromCache(cache);
@@ -22,7 +22,7 @@ var ready = (callback) => {
  const loadPicsFromCache = async (cache) => {
     // if somehow the pictures cache doesn't have all the pictures fetch again
 
-    cache.match( 'https://eldadzzipori.github.io/static/primary_background.jpg').then((r) => {
+    cache.match( 'https://eldadzzipori.com/static/primary_background.jpg').then((r) => {
 
         r.blob().then((value) => {
             let background = document.querySelector("#main_background");
@@ -30,7 +30,7 @@ var ready = (callback) => {
             background.className += " getSmaller";
         });
     });
-    cache.match( 'https://eldadzzipori.github.io/static/secondary_backgroud.jpg').then((r) => {
+    cache.match( 'https://eldadzzipori.com/static/secondary_backgroud.jpg').then((r) => {
         r.blob().then((value) => {
             let background = document.querySelector("#secondery_backgroind");
             background.setAttribute("style", "background-image:url('"+ URL.createObjectURL(value) + "'");
