@@ -67,7 +67,7 @@ nav {
     vertical-align: top;
     font-size: max(1.75vw, 22px);
     
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: "Times New Roman", Times, serif;
     color: white;
     /*font-weight: bold;*/
     text-shadow:
@@ -150,7 +150,7 @@ nav {
   /* Position the tooltip text - see examples below! */
   
   z-index: 1;
-  font-family:  'Baloo Paaji 2', cursive;
+  font-family:  "Times New Roman", Times, serif;
  
 }
 .tooltiptext > span {
