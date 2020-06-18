@@ -7,8 +7,8 @@ var ready = function ready(callback) {
 var updateCache = async function updateCache() {
   caches.open("pictures").then(function (cache) {
     cache.keys().then(function (keys) {
-      if (keys.length != 2) {
-        cache.addAll(['https://eldadzzipori.com/static/primary_background.jpg', 'https://eldadzzipori.com/static/secondary_backgroud.jpg']).then(function () {
+      if (keys.length != 3) {
+        cache.addAll(['https://eldadzzipori.com/static/primary_background.jpg', 'https://eldadzzipori.com/static/secondary_backgroud.jpg',"https://eldadzzipori.com/static/programming_rive.flr"]).then(function () {
           return loadPicsFromCache(cache);
         });
         return;
@@ -35,6 +35,22 @@ var loadPicsFromCache = async function loadPicsFromCache(cache) {
       background.classList += " getSmaller";
     });
   });
+    
+    cache.match('https://eldadzzipori.com/static/programming_rive.flr').then(function (r) {
+    r.blob().then(function (value) {
+      var programing_element = document.getElementById("ProgramingCanvas");
+        Programing = new RivePlayer(programing_element, function () {
+        Programing.load(URL.createObjectURL(value), function (error) {
+        programing_element.setAttribute("style", "");
+        programing_element.className += " getMoreSmaller";
+
+        if (error) {
+            console.log("failed to load actor file...", error);
+        }
+        }, "#ProgramingCanvas", [490, 490], 0.25, 0.015, [0.74, 0.59, 0.41, 1.0]);
+        });
+    });
+  });
 };
 
 var BackgroundLoaded = function BackgroundLoaded() {
@@ -54,17 +70,8 @@ var BackgroundLoaded = function BackgroundLoaded() {
       }
     });
   }, "#MuchMorecanvas", [105, 95], 1.0, 0.010, [0.74, 0.59, 0.41, 1.0]);
-  var programing_element = document.getElementById("ProgramingCanvas");
-  Programing = new RivePlayer(programing_element, function () {
-    Programing.load("/static/programming_rive.flr", function (error) {
-      programing_element.setAttribute("style", "");
-      programing_element.className += " getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#ProgramingCanvas", [490, 490], 0.25, 0.015, [0.74, 0.59, 0.41, 1.0]);
+  
+  
   var electronics_element = document.getElementById("ElectronicsCanvas");
   Electronics = new RivePlayer(electronics_element, function () {
     Electronics.load("/static/electronics_rive.flr", function (error) {
