@@ -74,6 +74,7 @@ nav {
     padding: 0 1% 0 1%;
     width:100% ;
     vertical-align: top;
+    font-size: 22px;
     font-size: max(1.75vw, 22px);
     
     font-family: "Times New Roman", Times, serif;
@@ -157,6 +158,7 @@ nav {
   color: white;
   text-align: center;
   font-weight: bold;
+  font-size: 22px;
   font-size: max(1.5vw,18px);
   text-shadow:
   -1px -1px 0 #000,  
@@ -306,14 +308,17 @@ to {opacity: 0.0};
 .profile_box_item > div > span {
     display: table-cell;
     width: 50%;
+    font-size: 14px;
     font-size: max(1.5vw,14px);
 }
 
 .profile_box_item > h4 {
+    font-size: 30px;
     font-size: max(2vw, 30px);
     
 }
 .profile_box_item > h6 {
+    font-size: 16px;
     font-size: max(1.5vw, 18px);
     
 }
