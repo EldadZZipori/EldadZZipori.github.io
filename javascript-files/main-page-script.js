@@ -4,38 +4,59 @@ var ready = function ready(callback) {
   if (document.readyState != "loading") callback();else document.addEventListener("DOMContentLoaded", callback());
 };
 
+
+var pictures = [
+    {
+      element_id: "main_background",
+      remote_url: "/static/primary_background.jpg"
+    },
+    {
+      element_id: "secondery_backgroind",
+      remote_url: "/static/secondary_backgroud.jpg"
+    },
+    {
+      element_id: "whatsapp",
+      remote_url: "/static/whatsapplogo.png"
+    }
+]
 var updateCache = async function updateCache() {
   caches.open("pictures").then(function (cache) {
     cache.keys().then(function (keys) {
-      if (keys.length != 2) {
-        cache.addAll(['/static/primary_background.jpg', '/static/secondary_backgroud.jpg']).then(function () {
-          return loadPicsFromCache(cache);
+      if (keys.length != pictures.length) {
+        pictures.map( picture => {
+          cache.add(picture["remote_url"]).then(function(){
+            loadPicFromCache(cache, picture)
+          });
         });
         return;
       }
 
-      loadPicsFromCache(cache);
+      loadPicFromCache(cache);
     });
   });
 };
 
-var loadPicsFromCache = async function loadPicsFromCache(cache) {
+var loadPicFromCache = async function loadPicFromCache(cache, picture) {
   // if somehow the pictures cache doesn't have all the pictures fetch again
-  cache.match('/static/primary_background.jpg').then(function (r) {
-    r.blob().then(function (value) {
-      var background = document.querySelector("#main_background");
-      background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
-      background.className += " getSmaller";
+  if (picture != undefined){
+     embedPicture(cache,picture);
+  } else {
+    pictures.map(picture => {
+      embedPicture(cache,picture);
     });
-  });
-  cache.match('/static/secondary_backgroud.jpg').then(function (r) {
-    r.blob().then(function (value) {
-      var background = document.querySelector("#secondery_backgroind");
-      background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
-      background.classList += " getSmaller";
-    });
-  });
+  }
+ 
 };
+
+var embedPicture = function embedPicture(cache, picture) {
+          cache.match(picture["remote_url"]).then(function (r) {
+              r.blob().then(function (value) {
+              var background = document.getElementById(picture["element_id"]);
+              background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
+              background.className += " getSmaller";
+        });
+      });
+}
 
 var BackgroundLoaded = function BackgroundLoaded() {
   var MuchMore;
