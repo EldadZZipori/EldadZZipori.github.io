@@ -8,15 +8,18 @@ var ready = function ready(callback) {
 var pictures = [
     {
       element_id: "main_background",
-      remote_url: "/static/primary_background.jpg"
+      remote_url: "/static/primary_background.jpg",
+      type: "background"
     },
     {
       element_id: "secondery_backgroind",
-      remote_url: "/static/secondary_backgroud.jpg"
+      remote_url: "/static/secondary_backgroud.jpg",
+      type: "background"
     },
     {
       element_id: "whatsapp",
-      remote_url: "/static/whatsapplogo.png"
+      remote_url: "/static/whatsapplogo.png",
+      type: "img"
     }
 ]
 var updateCache = async function updateCache() {
@@ -52,7 +55,11 @@ var embedPicture = function embedPicture(cache, picture) {
           cache.match(picture["remote_url"]).then(function (r) {
               r.blob().then(function (value) {
               var background = document.getElementById(picture["element_id"]);
-              background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
+              if(picture["type"] == "img" ){
+                background.setAttribute("src",URL.createObjectURL(value));
+              } else {
+                background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
+              }
               background.className += " getSmaller";
         });
       });
