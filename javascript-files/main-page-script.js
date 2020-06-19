@@ -8,7 +8,7 @@ var updateCache = async function updateCache() {
   caches.open("pictures").then(function (cache) {
     cache.keys().then(function (keys) {
       if (keys.length != 2) {
-        cache.addAll(['https://eldadzzipori.com/static/primary_background.jpg', 'https://eldadzzipori.com/static/secondary_backgroud.jpg']).then(function () {
+        cache.addAll(['/static/primary_background.jpg', '/static/secondary_backgroud.jpg']).then(function () {
           return loadPicsFromCache(cache);
         });
         return;
@@ -21,14 +21,14 @@ var updateCache = async function updateCache() {
 
 var loadPicsFromCache = async function loadPicsFromCache(cache) {
   // if somehow the pictures cache doesn't have all the pictures fetch again
-  cache.match('https://eldadzzipori.com/static/primary_background.jpg').then(function (r) {
+  cache.match('/static/primary_background.jpg').then(function (r) {
     r.blob().then(function (value) {
       var background = document.querySelector("#main_background");
       background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
       background.className += " getSmaller";
     });
   });
-  cache.match('https://eldadzzipori.com/static/secondary_backgroud.jpg').then(function (r) {
+  cache.match('/static/secondary_backgroud.jpg').then(function (r) {
     r.blob().then(function (value) {
       var background = document.querySelector("#secondery_backgroind");
       background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
