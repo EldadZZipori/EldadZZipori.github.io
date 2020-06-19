@@ -280,7 +280,7 @@ to {opacity: 0.0};
 
 /* sytle for the overall profile box */
 #profile_box {
-    min-width:350px; 
+    min-width: 325px; 
     display: table;
     width: 50%;
     background-color:#BC986A;

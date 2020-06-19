@@ -4,54 +4,59 @@ var ready = function ready(callback) {
   if (document.readyState != "loading") callback();else document.addEventListener("DOMContentLoaded", callback());
 };
 
+
+var pictures = [
+    {
+      element_id: "main_background",
+      remote_url: "/static/primary_background.jpg"
+    },
+    {
+      element_id: "secondery_backgroind",
+      remote_url: "/static/secondary_backgroud.jpg"
+    },
+    {
+      element_id: "whatsapp",
+      remote_url: "/static/whatsapplogo.png"
+    }
+]
 var updateCache = async function updateCache() {
   caches.open("pictures").then(function (cache) {
     cache.keys().then(function (keys) {
-      if (keys.length != 3) {
-        cache.addAll(['https://eldadzzipori.com/static/primary_background.jpg', 'https://eldadzzipori.com/static/secondary_backgroud.jpg',"https://eldadzzipori.com/static/programming_rive.flr"]).then(function () {
-          return loadPicsFromCache(cache);
+      if (keys.length != pictures.length) {
+        pictures.map( picture => {
+          cache.add(picture["remote_url"]).then(function(){
+            loadPicFromCache(cache, picture)
+          });
         });
         return;
       }
 
-      loadPicsFromCache(cache);
+      loadPicFromCache(cache);
     });
   });
 };
 
-var loadPicsFromCache = async function loadPicsFromCache(cache) {
+var loadPicFromCache = async function loadPicFromCache(cache, picture) {
   // if somehow the pictures cache doesn't have all the pictures fetch again
-  cache.match('https://eldadzzipori.com/static/primary_background.jpg').then(function (r) {
-    r.blob().then(function (value) {
-      var background = document.querySelector("#main_background");
-      background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
-      background.className += " getSmaller";
+  if (picture != undefined){
+     embedPicture(cache,picture);
+  } else {
+    pictures.map(picture => {
+      embedPicture(cache,picture);
     });
-  });
-  cache.match('https://eldadzzipori.com/static/secondary_backgroud.jpg').then(function (r) {
-    r.blob().then(function (value) {
-      var background = document.querySelector("#secondery_backgroind");
-      background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
-      background.classList += " getSmaller";
-    });
-  });
-    
-    cache.match('https://eldadzzipori.com/static/programming_rive.flr').then(function (r) {
-    r.blob().then(function (value) {
-      var programing_element = document.getElementById("ProgramingCanvas");
-        Programing = new RivePlayer(programing_element, function () {
-        Programing.load(URL.createObjectURL(value), function (error) {
-        programing_element.setAttribute("style", "");
-        programing_element.className += " getMoreSmaller";
-
-        if (error) {
-            console.log("failed to load actor file...", error);
-        }
-        }, "#ProgramingCanvas", [490, 490], 0.25, 0.015, [0.74, 0.59, 0.41, 1.0]);
-        });
-    });
-  });
+  }
+ 
 };
+
+var embedPicture = function embedPicture(cache, picture) {
+          cache.match(picture["remote_url"]).then(function (r) {
+              r.blob().then(function (value) {
+              var background = document.getElementById(picture["element_id"]);
+              background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
+              background.className += " getSmaller";
+        });
+      });
+}
 
 var BackgroundLoaded = function BackgroundLoaded() {
   var MuchMore;
@@ -70,8 +75,17 @@ var BackgroundLoaded = function BackgroundLoaded() {
       }
     });
   }, "#MuchMorecanvas", [105, 95], 1.0, 0.010, [0.74, 0.59, 0.41, 1.0]);
-  
-  
+  var programing_element = document.getElementById("ProgramingCanvas");
+  Programing = new RivePlayer(programing_element, function () {
+    Programing.load("/static/programming_rive.flr", function (error) {
+      programing_element.setAttribute("style", "");
+      programing_element.className += " getMoreSmaller";
+
+      if (error) {
+        console.log("failed to load actor file...", error);
+      }
+    });
+  }, "#ProgramingCanvas", [490, 490], 0.25, 0.015, [0.74, 0.59, 0.41, 1.0]);
   var electronics_element = document.getElementById("ElectronicsCanvas");
   Electronics = new RivePlayer(electronics_element, function () {
     Electronics.load("/static/electronics_rive.flr", function (error) {
