@@ -1,137 +1,130 @@
 "use strict"; // When page loads
 
 var ready = function ready(callback) {
-  if (document.readyState != "loading") callback();else document.addEventListener("DOMContentLoaded", callback());
+  if (document.readyState != "loading") callback(); else document.addEventListener("DOMContentLoaded", callback());
 };
 
 
 var pictures = [
-    {
-      element_id: "main_background",
-      remote_url: "/static/primary_background.jpg",
-      type: "background"
-    },
-    {
-      element_id: "secondery_backgroind",
-      remote_url: "/static/secondary_backgroud.jpg",
-      type: "background"
-    },
-    {
-      element_id: "whatsapp",
-      remote_url: "/static/whatsapplogo.png",
-      type: "img"
-    }
-]
-var updateCache = async function updateCache() {
-  caches.open("pictures").then(function (cache) {
-    cache.keys().then(function (keys) {
-      if (keys.length != pictures.length) {
-        pictures.map( picture => {
-          cache.add(picture["remote_url"]).then(function(){
-            loadPicFromCache(cache, picture)
-          });
-        });
-        return;
-      }
-
-      loadPicFromCache(cache);
-    });
-  });
-};
-
-var loadPicFromCache = async function loadPicFromCache(cache, picture) {
-  // if somehow the pictures cache doesn't have all the pictures fetch again
-  if (picture != undefined){
-     embedPicture(cache,picture);
-  } else {
-    pictures.map(picture => {
-      embedPicture(cache,picture);
-    });
+  {
+    element_id: "main_background",
+    remote_url: "/static/primary_background.jpg",
+    type: "background"
+  },
+  {
+    element_id: "secondery_backgroind",
+    remote_url: "/static/secondary_backgroud.jpg",
+    type: "background"
+  },
+  {
+    element_id: "whatsapp",
+    remote_url: "/static/whatsapplogo.png",
+    type: "img"
   }
- 
+]
+
+var rives = [
+  {
+    element_id: "MuchMorecanvas",
+    remote_url: "/static/books_rive.flr",
+    viewcenter: [105, 95],
+    scale: 1.0,
+    elapsed: 0.010,
+    color: [0.74, 0.59, 0.41, 1.0]
+  },
+  {
+    element_id: "ProgramingCanvas",
+    remote_url: "/static/programming_rive.flr",
+    viewcenter: [490, 490],
+    scale: 0.25,
+    elapsed: 0.015,
+    color: [0.74, 0.59, 0.41, 1.0]
+  },
+  {
+    element_id: "ElectronicsCanvas",
+    remote_url: "/static/electronics_rive.flr",
+    viewcenter: [525, 425],
+    scale: 0.30,
+    elapsed: 0.040,
+    color: [0.74, 0.59, 0.41, 1.0]
+  },
+  {
+    element_id: "ManagmentCanvas",
+    remote_url: "/static/managment_rive.flr",
+    viewcenter: [190, 160
+    ],
+    scale: 0.8,
+    elapsed: 0.010,
+    color: [0.74, 0.59, 0.41, 1.0]
+  },
+]
+var LoadRives = function LoadRives() {
+  var CV;
+
+  rives.map(item => {
+    var current_element = document.getElementById(item.element_id);
+    var current_rive = new RivePlayer(current_element, function () {
+      current_rive.load(item.remote_url, function (error) {
+        current_element.setAttribute("style", "");
+        current_element.className += " getMoreSmaller";
+
+        if (error) {
+          console.log("failed to load actor file...", error);
+        }
+      });
+    }, "#" + item.element_id, item.viewcenter, item.scale, item.elapsed, item.color);
+  });
+
+  /*  var cv_element = document.getElementById("cv");
+    CV = new RivePlayer(cv_element, function () {
+      CV.load("/static/cv_rive.flr", function (error) {
+        cv_element.setAttribute("style", "");
+        cv_element.className += "getMoreSmaller";
+  
+        if (error) {
+          console.log("failed to load actor file...", error);
+        }
+      });
+    }, "#cv", [100, 100], 1.25, 0.01, [0.89, 0.96, 0.89, 1.0]);*/
 };
 
-var embedPicture = function embedPicture(cache, picture) {
-          cache.match(picture["remote_url"]).then(function (r) {
-              r.blob().then(function (value) {
-              var background = document.getElementById(picture["element_id"]);
-              if(picture["type"] == "img" ){
-                background.setAttribute("src",URL.createObjectURL(value));
-              } else {
-                background.setAttribute("style", "background-image:url('" + URL.createObjectURL(value) + "'");
-              }
-              background.className += " getSmaller";
-        });
-      });
+var updateCache = async function updateCache() {
+  let cache = await caches.open("pictures");
+  let keys = await cache.keys();
+  if (keys.length != pictures.length) {
+      for(let i = 0; i < pictures.length; i++){
+         await cache.add(pictures[i]["remote_url"]);
+      }
+  }
+   loadPicFromCache(cache);
+};
+
+var loadPicFromCache = async function loadPicFromCache(cache) {
+  // if somehow the pictures cache doesn't have all the pictures fetch again
+  for(let i = 0; i < pictures.length; i++){
+    await embedPicture(cache, pictures[i]);
+  }
+
+};
+
+var embedPicture = async function embedPicture(cache, picture) {
+  var r = await cache.match(picture["remote_url"]);
+  let image_blob = await r.blob();
+  var background = document.getElementById(picture["element_id"]);
+  let url =  URL.createObjectURL(image_blob);
+  if (picture["type"] == "img") {
+    background.setAttribute("src", url);
+  } else {
+    background.setAttribute("style", "background-image:url('" + url+ "'");
+  }
+   background.className += " getSmaller";
 }
 
-var BackgroundLoaded = function BackgroundLoaded() {
-  var MuchMore;
-  var Programing;
-  var Electronics;
-  var CV;
-  var Managment;
-  var more_element = document.getElementById("MuchMorecanvas");
-  MuchMore = new RivePlayer(more_element, function () {
-    MuchMore.load("/static/books_rive.flr", function (error) {
-      more_element.setAttribute("style", "");
-      more_element.className += " getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#MuchMorecanvas", [105, 95], 1.0, 0.010, [0.74, 0.59, 0.41, 1.0]);
-  var programing_element = document.getElementById("ProgramingCanvas");
-  Programing = new RivePlayer(programing_element, function () {
-    Programing.load("/static/programming_rive.flr", function (error) {
-      programing_element.setAttribute("style", "");
-      programing_element.className += " getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#ProgramingCanvas", [490, 490], 0.25, 0.015, [0.74, 0.59, 0.41, 1.0]);
-  var electronics_element = document.getElementById("ElectronicsCanvas");
-  Electronics = new RivePlayer(electronics_element, function () {
-    Electronics.load("/static/electronics_rive.flr", function (error) {
-      electronics_element.setAttribute("style", "");
-      electronics_element.className += " getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#ElectronicsCanvas", [525, 425], 0.30, 0.040, [0.74, 0.59, 0.41, 1.0]);
-  var managment_element = document.getElementById("ManagmentCanvas");
-  Managment = new RivePlayer(managment_element, function () {
-    Managment.load("/static/managment_rive.flr", function (error) {
-      managment_element.setAttribute("style", "");
-      managment_element.className += " getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#ManagmentCanvas", [190, 160], 0.9, 0.010, [0.74, 0.59, 0.41, 1.0]);
-  var cv_element = document.getElementById("cv");
-  CV = new RivePlayer(cv_element, function () {
-    CV.load("/static/cv_rive.flr", function (error) {
-      cv_element.setAttribute("style", "");
-      cv_element.className += "getMoreSmaller";
-
-      if (error) {
-        console.log("failed to load actor file...", error);
-      }
-    });
-  }, "#cv", [100, 100], 1.25, 0.01, [0.89, 0.96, 0.89, 1.0]);
-};
 
 ready(function () {
   // Checks if pictures are in the local cache
   updateCache();
-  BackgroundLoaded(); // initiate material Navbar
+  LoadRives(); // initiate material Navbar
 
   var elems = document.querySelectorAll('.sidenav');
   var instances = M.Sidenav.init(elems, {}); // sets the CV bubble to play on hover
