@@ -134,14 +134,19 @@ ready(function () {
   BackgroundLoaded(); // initiate material Navbar
 
   var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, {}); // sets the CV bubble to play on hover
+  var instances = M.Sidenav.init(elems, {}); 
 
-  document.getElementById("cv").addEventListener('mouseover', function (e) {
+  var cv_canvas = document.getElementById("cv");
+  cv_canvas.addEventListener('mouseover', function (e) {
     e.srcElement.setAttribute('data', 1);
   });
-  document.getElementById("cv").addEventListener('mouseout', function (e) {
+  cv_canvas.addEventListener('mouseout', function (e) {
     e.srcElement.setAttribute('data', 0);
   }); // setes the bubbles to play on hover and the tooltip to appear on hover
+  cv_canvas.addEventListener("click",function(e){
+    console.log("click");
+    window.open("/static/2019_English.pdf","_blank");
+  });
 
   document.querySelectorAll(".skills_bullets_buble_wrapper").forEach(function (element) {
     element.addEventListener("mouseover", function (e) {
@@ -156,6 +161,6 @@ ready(function () {
       element.querySelector('canvas').setAttribute('data', 0);
       tooltip.className += " FadeOut";
       tooltip.classList.remove("FadeIn");
-    });
+    }, false);
   });
 });
