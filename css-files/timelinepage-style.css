@@ -10,20 +10,22 @@ html,
 body
  {
   height: 100%;
+  width: 100%;
 }
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    margin: 8px !important;
+    padding:8px;
 }
 nav {
-    min-width: 375px;
-    width: calc(100% + 8px) !important;
+    min-width: 350p;
+    width: calc(100vw + 8px);
     margin: -8px 0 0 -4px;
     background-color: #548DBD !important;
     -webkit-box-shadow: 0px 5px 5px 5px rgba(0, 0, 0,0.5)!important;
             box-shadow: 0px 5px 5px 5px rgba(0, 0, 0,0.5)!important;
 }
+
 .swiper_container_wrapper {
     margin-top: 2px;
   display: -webkit-box;
