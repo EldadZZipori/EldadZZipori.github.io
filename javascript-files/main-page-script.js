@@ -30,7 +30,7 @@ var rives = [
     viewcenter: [105, 95],
     scale: 1.0,
     elapsed: 0.010,
-    color: [0.74, 0.59, 0.41, 1.0]
+    color: [14/255, 42/255, 54/255, 0.9]
   },
   {
     element_id: "ProgramingCanvas",
@@ -38,7 +38,7 @@ var rives = [
     viewcenter: [490, 490],
     scale: 0.25,
     elapsed: 0.015,
-    color: [0.74, 0.59, 0.41, 1.0]
+    color: [14/255, 42/255, 54/255, 0.9]
   },
   {
     element_id: "ElectronicsCanvas",
@@ -46,16 +46,15 @@ var rives = [
     viewcenter: [525, 425],
     scale: 0.30,
     elapsed: 0.040,
-    color: [0.74, 0.59, 0.41, 1.0]
+    color: [14/255, 42/255, 54/255, 0.9]
   },
   {
     element_id: "ManagmentCanvas",
     remote_url: "/static/managment_rive.flr",
-    viewcenter: [190, 160
-    ],
+    viewcenter: [190, 160],
     scale: 0.8,
     elapsed: 0.010,
-    color: [0.74, 0.59, 0.41, 1.0]
+    color: [14/255, 42/255, 54/255, 0.9]
   },
 ]
 var LoadRives = function LoadRives() {
@@ -115,7 +114,7 @@ var embedPicture = async function embedPicture(cache, picture) {
   if (picture["type"] == "img") {
     background.setAttribute("src", url);
   } else {
-    background.setAttribute("style", "background-image:url('" + url+ "'");
+    background.setAttribute("style", "background-image:url('"/* + url*/+ "'");
   }
    background.className += " getSmaller";
 }
