@@ -20,7 +20,6 @@ body {
 body, html {
     height: 100%;
     min-width: 300px;
-    /*background-color: #FBEEC1 !important;*/
     background-color: #0E2A36 !important;
 }
 
@@ -36,6 +35,9 @@ nav {
 nav > div > ul {
     line-height: 80px !important;
 }
+nav > div > ul  > li {
+    position: relative;
+}
 nav > div > ul > li::after {
     content: "";
     width: 1px;
@@ -46,6 +48,7 @@ nav > div > ul > li::after {
     opacity: 0.8;
     color: white;
     background-color: white;
+    right: 0;
 }
 
 #logo {
@@ -89,9 +92,6 @@ nav > div > ul > li::after {
     width:  65%;
     top: 20%;
     margin: 5% auto;
-    /*border-radius: 10px 10px;
-      -webkit-box-shadow: 0px 70px 113px 10px rgba(0,0,0,0.75) !important;
-    box-shadow: 0px 20px 70px 10px rgba(0,0,0,0.75) !important;*/
     padding: 6px;
 }
 
@@ -106,12 +106,6 @@ nav > div > ul > li::after {
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    /*font-weight: bold;*/
-    /*text-shadow:
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;*/
 }
 
 /* centering the skills bullets */
@@ -158,18 +152,17 @@ nav > div > ul > li::after {
     border-radius: 10px;
     -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
             box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
-    cursor: pointer;
     width: 48%;
     height: 100%;   
     margin-left: 7.5px;
     margin-right: 7.5px;
-    max-height: 635px;
     min-height: 335px;
 }
 .skills_bullets_buble_wrapper > div{
     position: relative;
     font-weight: bold;
     font-size: 18px;
+    font-size: max(1.3vw,18px);
     top:-50px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -178,9 +171,18 @@ nav > div > ul > li::after {
 }
 .skills_bullets_buble_wrapper > p{
     font-size: 13px;
+    font-size: max(1vw,13px);
     color: silver;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;
+}
+.skills_bullets_buble_wrapper > a{
+    margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+    font-size: max(1.1vw,14px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #00cfa7;
 }
 .skills_bullets{
     display: block;
@@ -190,69 +192,8 @@ nav > div > ul > li::after {
     min-width: 150px;
     width: 70%;
     height: 80%;
-    /*border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border: 8px solid #DAAD86;
-    text-align: center;*/
+}
 
-    
-}
-.tooltiptext {
-    position: relative;
-    display: inline;
-  opacity: 0.0;
-    right: 10%;
-    bottom: 15px;
-  background-color: lightyellow;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 22px;
-  font-size: max(1.5vw,18px);
-  text-shadow:
-  -1px -1px 0 #000,  
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-   1px 1px 0 #000;
-  
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border: 5px solid #659EBC;
-  padding: 6% 6%;
-  /* Position the tooltip text - see examples below! */
-  
-  z-index: 1;
-  font-family:  "Times New Roman", Times, serif;
- 
-}
-.tooltiptext > span {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-}
-.tooltiptext > span:before{
-content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: auto;
-  right: 50px;
-  bottom: -32px;
-  border: 16px solid;
-  border-color: #659EBC #659EBC transparent transparent;
-}
-.tooltiptext > span:after{
-content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: auto;
-  right: 58px;
-  bottom: -16px;
-  border: 8px solid;
-  border-color: lightyellow lightyellow transparent transparent;
-}
 
 
 .FadeIn {
@@ -282,6 +223,7 @@ from {opacity: 1.0;}
 to {opacity: 0.0};
 }
 .getSmaller {
+    visibility: visible !important;
     -webkit-animation-name: GetSmaller;
     
     animation-name: GetSmaller;
@@ -302,17 +244,7 @@ to {opacity: 0.0};
     animation-fill-mode: forwards;
 
 }
-/* style for skills bullets */
 
-
-/*.skills_bullets_buble_wrapper:hover {
-    -webkit-animation-name: GetBigger;
-            animation-name: GetBigger;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-}*/
 
 @-webkit-keyframes GetBigger {
     from {-webkit-transform: scale(1,1);transform: scale(1,1);}
@@ -334,6 +266,7 @@ to {opacity: 0.0};
 
 /* sytle for the overall profile box */
 #profile_box {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     min-width:300px; 
     display: table;
     width: 50%;
@@ -389,37 +322,6 @@ to {opacity: 0.0};
     min-height:35px;
 }
 
-#cv {
-    cursor: pointer;
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    bottom: 7%;
-    right: 5%;
-    border-radius: 50px;
-     -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border: 1px solid green;
-    
- 
-}
-
-#cv:hover {
-    -webkit-animation-name: GetMoreBigger;
-            animation-name: GetMoreBigger;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-}
-.Spin{
-    
-    /*-webkit-animation:NameSpin 1s 4 linear;
-            animation:NameSpin 1s 4 linear;
-            -webkit-animation-delay: 0s;
-                    animation-delay: 0s;*/
-}
-
 @-webkit-keyframes GetMoreBigger {
     from {-webkit-transform: scale(1,1);transform: scale(1,1);}
     to {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
@@ -437,24 +339,3 @@ to {opacity: 0.0};
     to {-webkit-transform: scale(1,1);transform: scale(1,1);}
 }
 
-
-/*@-webkit-keyframes NameSpin
-{
-    0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-    25% { left:10vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
-    50% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
-}
-@keyframes NameSpin
-{
-    from {transform: translate(-50%) rotate(0deg) ; }
-    to {transform: translate(-50%) rotate(360deg);}
-    /*0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-    25% { left:10vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
-    50% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
-}*/
