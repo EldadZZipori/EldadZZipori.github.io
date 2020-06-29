@@ -15,12 +15,12 @@ body {
 }
 body, html {
     height: 100%;
-    min-width: 350px;
+    min-width: 300px;
     background-color: #FBEEC1 !important;
 }
 
 nav {
-    min-width: 350px;
+    min-width: 280px;
     width: calc(100% + 8px) !important;
     margin: -8px 0 0 -4px;
     background-color: #548DBD !important;
@@ -283,7 +283,7 @@ to {opacity: 0.0};
 
 /* sytle for the overall profile box */
 #profile_box {
-    min-width:325px; 
+    min-width:300px; 
     display: table;
     width: 50%;
     background-color:#BC986A;
@@ -363,10 +363,10 @@ to {opacity: 0.0};
 }
 .Spin{
     
-    -webkit-animation:NameSpin 5s 1;
-            animation:NameSpin 5s 1;
-            -webkit-animation-delay: 3s;
-                    animation-delay: 3s;
+    -webkit-animation:NameSpin 1s 4 linear;
+            animation:NameSpin 1s 4 linear;
+            -webkit-animation-delay: 0s;
+                    animation-delay: 0s;
 }
 
 @-webkit-keyframes GetMoreBigger {
@@ -387,7 +387,7 @@ to {opacity: 0.0};
 }
 
 
-@-webkit-keyframes NameSpin
+/*@-webkit-keyframes NameSpin
 {
     0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
     25% { left:10vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
@@ -395,20 +395,15 @@ to {opacity: 0.0};
     55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
     70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
     100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
-}
+}*/
 @keyframes NameSpin
 {
-    0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    from {transform: translate(-50%) rotate(0deg) ; }
+    to {transform: translate(-50%) rotate(360deg);}
+    /*0% {left:45vw; -webkit-transform: rotate(0deg); transform: rotate(0deg); }
     25% { left:10vw; -webkit-transform: rotate(20deg); transform: rotate(20deg); }
     50% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
     55% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
     70% {-webkit-transform: rotate(0deg);transform: rotate(0deg);left:75%;}
-    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}
-}
-
-/* dedicated for materialize navbar */
-nav {
-    display: block;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+    100% {left:46vw;-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}*/
 }
