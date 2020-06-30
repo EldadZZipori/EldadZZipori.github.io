@@ -18,7 +18,7 @@ body {
     padding:8px;
 }
 body, html {
-
+    height: 100%;
     min-width: 300px;
     background-color: #0E2A36 !important;
 }
@@ -37,24 +37,18 @@ nav > div > ul {
 }
 nav > div > ul  > li {
     position: relative;
-    width: 100px;
-    text-align: center;
 }
 nav > div > ul > li::after {
     content: "";
     width: 1px;
     display: block;
     position: absolute;
-    height: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    opacity: 0.4;
+    height: 68px;
+    top:5.5px;
+    opacity: 0.8;
     color: white;
     background-color: white;
-    right: -1px;
-}
-nav ul a {
-    padding: 0 !important;
+    right: 0;
 }
 nav .sidenav-trigger i {
     height: 80px !important;
@@ -69,29 +63,52 @@ nav .sidenav-trigger i {
 
 
 /* This class is used for all images on the page which don't have any text hovering on them */
-.top_box {
+.background {
+    opacity: 0.9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     width:100%;
+   
+    min-height: 350px;
     -webkit-animation-delay: 0.2s;
             animation-delay: 0.2s;
-            font-weight: bold;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
+
 } 
 
-.top_box > p {
+.background > div {
+    /*background-color: #17252A;*/
+    font-weight: bold;
+    display: inline-block;
+    min-width: 275px;
+    height: 80%;
+    width:  85%;
+    top: 20%;
+    margin: 5% auto;
+    padding: 6px;
+}
+
+.background > div > p {
     display: inline-block;
     text-align: center;
-    width:85% ;
+    padding: 0 1% 0 1%;
+    width:100% ;
     vertical-align: top;
     font-size: 2px;
     font-size: max(1.6vw, 20px);
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-}
-.box_spacing {
-    margin: 250px auto;
 }
 
 /* centering the skills bullets */
@@ -124,41 +141,35 @@ nav .sidenav-trigger i {
 
 
 .skills_bullets_buble_wrapper{
-    width: 50%;
-    padding: 1rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
+            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
+    width: 48%;
     height: 100%;   
     margin-left: 7.5px;
     margin-right: 7.5px;
     min-height: 335px;
 }
-.skills_content {
-    padding: 1.5rem;
-    border-radius: .5rem;
-    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
-            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0,0.8);
-
-    text-align: left;
-    
-}
-.skills_content > div{
+.skills_bullets_buble_wrapper > div{
     position: relative;
     font-weight: bold;
-    font-size: 1.125rem;
-    top:-30px;
+    font-size: 18px;
+    font-size: max(1.3vw,18px);
+    top:-50px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 
 }
-.skills_content > p{
-    font-size: 1rem;
-    margin-top: -10px;
+.skills_bullets_buble_wrapper > p{
+    font-size: 13px;
+    font-size: max(1vw,13px);
     color: silver;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;
-    
 }
-.skills_content > a{
+.skills_bullets_buble_wrapper > a{
+    margin-bottom: 20px;
     display: block;
     font-size: 14px;
     font-size: max(1.1vw,14px);
@@ -252,6 +263,7 @@ to {opacity: 0.0};
     width: 50%;
     background-color:#17252A;
     border-radius: 10px;
+    margin: 3% auto;
     text-align: center;
     color: white;
 }
@@ -332,4 +344,3 @@ to {opacity: 0.0};
     from {-webkit-transform: scale(1.5,1.5);transform: scale(1.5,1.5);}
     to {-webkit-transform: scale(1,1);transform: scale(1,1);}
 }
-
