@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="static/favicon.png" type="image/gif" sizes="16x16" />
         <title>Eldad Zipori</title>    
 
         <!-- CSS files
@@ -54,10 +54,8 @@
 
         
         <!-- Top image box -->
-        <div class="background" id="main_background" style="visibility: hidden;">
-            <div>
+        <div class="top_box box_spacing" id="main_background" style="visibility: hidden;">
                 <p>Today's world needs people Not just "Programmers" or "Engineers".<br> I invite you to explore my life and my various interests.<br> Not only Technology but topics from Management to Humanities.<br><b>You and your company need a round character.</b></p>
-            </div>
         </div>
         
         <!-- Contains the bubles/ bullets of expertice and topcis of intersts / skills -->
@@ -65,16 +63,19 @@
             <div class="flex_container">
                 <div class="skills_bullets_buble_wrapper">
                     <!--<span class="tooltiptext"><span>Programing</span></span>-->
-                    <canvas id="ProgramingCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
-                    <div>Programing</div>
-                    <p>
-                        Started programming at the age of 15. Broad experince in various programming languages and devops technologies. 
-                        <!--Started programming at the age of 15. Got my first job as a programmer in PHP and WEB development at the age of 17th. I have a true passion for technologies and expending my knowledge. I know Python, C/C++, C# ,WEB development, JS, React, GraphQl and a lot more.-->
-                    </p>
-                    <a href="#">Learn More</a>
+                    <div class="skills_content">
+                        <canvas id="ProgramingCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
+                        <div>Programing</div>
+                        <p>
+                            Started programming at the age of 15. Broad experince in various programming languages and devops technologies. 
+                            <!--Started programming at the age of 15. Got my first job as a programmer in PHP and WEB development at the age of 17th. I have a true passion for technologies and expending my knowledge. I know Python, C/C++, C# ,WEB development, JS, React, GraphQl and a lot more.-->
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
                 </div>
                 <div class="skills_bullets_buble_wrapper">
                    <!--<span class="tooltiptext"><span>Electronics</span></span>-->
+                   <div class="skills_content">
                     <canvas id="ElectronicsCanvas" class="skills_bullets" id="second_circle"style="visibility: hidden;"></canvas>
                     <div>Electronics</div>
                     <p>
@@ -83,10 +84,12 @@
                     </p>
                     <a href="#">Learn More</a>
                 </div>
+                </div>
             </div>
             <div class="flex_container">
                 <div class="skills_bullets_buble_wrapper">
                     <!--<span class="tooltiptext"><span>Managment</span></span>-->
+                    <div class="skills_content">
                     <canvas id="ManagmentCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
                     <div>Management</div>
                     <p> 
@@ -94,7 +97,9 @@
                     </p>
                     <a href="#">Learn More</a>
                 </div>
+                </div>
                 <div class="skills_bullets_buble_wrapper" >
+                    <div class="skills_content">
                     <!--<span class="tooltiptext"><span>Much More</span></span>-->
                     <canvas id ="MuchMorecanvas" class="skills_bullets" style="visibility: hidden;" data="0"></canvas>
                     <div>Much More</div>
@@ -102,13 +107,13 @@
                         Technology is not everything. I truly belive that great people expand their horizons and learn topics outside their comfort zone.
                     </p>
                     <a href="#">Learn More</a>
-                    
+                </div>
                 </div>
             </div>
         </div>
          
         <!-- Profile information box --> 
-        <div id="profile_box">
+        <div id="profile_box" class="box_spacing">
             <!-- All the text in the profile information -->   
             <div class="profile_box_item">
                 <h4>Eldad Zeev Zipori</h3>
@@ -125,7 +130,7 @@
                 </span>
                     </div>
             </div>
-            <div class="profile_box_item">
+            <div class="profile_box_item box_spacing">
                     <a target="_blank" href="https://github.com/EldadZZipori"><img src="/static/github_logo.png"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/eldad-zipori-a411a5157"><img src="/static/linkedin_logo.png"></a>
                     <a target="_blank"  href="https://api.whatsapp.com/send?phone=972543100725&text=Hey%20Eldad,"><img id="whatsapp"src="/static/whatsapplogo.png" ></a>
