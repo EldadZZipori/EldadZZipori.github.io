@@ -75,7 +75,7 @@ var LoadRives = function LoadRives() {
     }, "#" + item.element_id, item.viewcenter, item.scale, item.elapsed, item.color);
   });
 
-  /*  var cv_element = document.getElementById("cv");
+    var cv_element = document.getElementById("cv");
     CV = new RivePlayer(cv_element, function () {
       CV.load("/static/cv_rive.flr", function (error) {
         cv_element.setAttribute("style", "");
@@ -85,7 +85,7 @@ var LoadRives = function LoadRives() {
           console.log("failed to load actor file...", error);
         }
       });
-    }, "#cv", [100, 100], 1.25, 0.01, [0.89, 0.96, 0.89, 1.0]);*/
+    }, "#cv", [100, 100], 1.25, 0.01, [0.89, 0.96, 0.89, 1.0]);
 };
 
 var updateCache = async function updateCache() {

@@ -79,9 +79,6 @@ function modalOpen(_This) {
       var ob = JSON.parse(this.responseText.toString());
       document.querySelector("#modal > div > h2").innerHTML = ob["data_name"];
       document.querySelector("#modal > div > p").innerHTML = ob["description"];
-      var status = document.querySelector("#modal > div > .status");
-      status.innerHTML = "Status: " + ob["status"];
-      status.className = "status " + ob["status"];
       modal.style.display = "block";
 
       var slideshow = document.querySelector("#modal > div > .slideshow-container");
@@ -103,7 +100,7 @@ function modalOpen(_This) {
     }
   };
 
-  xhttp.open("GET", `http://localhost/${_This.getAttribute("data")}.json`, true);
+  xhttp.open("GET", `static/${_This.getAttribute("data")}.json`, true);
   xhttp.send();
 }
 
@@ -158,7 +155,7 @@ function ready() {
     };
   };
 
-  xhttp.open("GET", `http://localhost/protfolio_list.json`, true);
+  xhttp.open("GET", `static/protfolio_list.json`, true);
   xhttp.send();
  
     
