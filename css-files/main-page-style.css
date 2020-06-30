@@ -37,18 +37,24 @@ nav > div > ul {
 }
 nav > div > ul  > li {
     position: relative;
+    width: 100px;
+    text-align: center;
+}
+nav ul a {
+    padding: 0 !important;
 }
 nav > div > ul > li::after {
     content: "";
     width: 1px;
     display: block;
     position: absolute;
-    height: 68px;
-    top:5.5px;
-    opacity: 0.8;
+    height: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
     color: white;
     background-color: white;
-    right: 0;
+    right: -1px;
 }
 nav .sidenav-trigger i {
     height: 80px !important;
