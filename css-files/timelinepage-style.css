@@ -16,6 +16,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     padding:8px;
+    background-color: #0E2A36 !important;
 }
 nav {
   min-width: 280px;
@@ -29,6 +30,9 @@ nav {
 nav > div > ul {
   line-height: 80px !important;
 }
+nav > div > ul  > li {
+  position: relative;
+}
 nav > div > ul > li::after {
   content: "";
   width: 1px;
@@ -39,13 +43,18 @@ nav > div > ul > li::after {
   opacity: 0.8;
   color: white;
   background-color: white;
+  right: 0;
 }
-
+nav .sidenav-trigger i {
+  height: 80px !important;
+  line-height: 80px !important;
+}
 #logo {
   position: relative;
   top: 2px;
   height:75px;
 }
+
 
 .swiper_container_wrapper {
     margin-top: 0px;
@@ -311,7 +320,7 @@ nav > div > ul > li::after {
     display: flex;
   }
   .timeline .swiper-button-prev {
-    top: 20%;
+    bottom: 0;
     left: auto;
     right: 16.5%;
     -webkit-transform: rotate(90deg) translate(0, 10px);

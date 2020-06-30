@@ -3,10 +3,10 @@
 }
 
 body {
-    background-color: #f1f1f1;
     padding: 0px;
     margin: 8px !important;
     font-family: Arial;
+    background-color: #0E2A36 !important;
 }
 nav {
   min-width: 280px;
@@ -20,6 +20,9 @@ nav {
 nav > div > ul {
   line-height: 80px !important;
 }
+nav > div > ul  > li {
+  position: relative;
+}
 nav > div > ul > li::after {
   content: "";
   width: 1px;
@@ -30,6 +33,11 @@ nav > div > ul > li::after {
   opacity: 0.8;
   color: white;
   background-color: white;
+  right: 0;
+}
+nav .sidenav-trigger i {
+  height: 80px !important;
+  line-height: 80px !important;
 }
 #logo {
   position: relative;
@@ -37,6 +45,10 @@ nav > div > ul > li::after {
   height:75px;
 }
 
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
 /* Align Website to center */
 .main {
     max-width: 1000px;
