@@ -69,54 +69,32 @@ nav .sidenav-trigger i {
 
 
 /* This class is used for all images on the page which don't have any text hovering on them */
-.background {
-    opacity: 0.9;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+.top_box {
     width:100%;
-   
-    min-height: 350px;
     -webkit-animation-delay: 0.2s;
             animation-delay: 0.2s;
 
-} 
-
-.background > div {
-    /*background-color: #17252A;*/
     font-weight: bold;
     display: inline-block;
     min-width: 275px;
-    height: 80%;
-    width:  85%;
-    top: 20%;
-    margin: 5% auto;
-    padding: 6px;
-}
+    text-align: center;
 
-.background > div > p {
+} 
+
+.top_box  > p {
     display: inline-block;
     text-align: center;
-    padding: 0 1% 0 1%;
-    width:100% ;
     vertical-align: top;
-    font-size: 2px;
+    font-size: 20px;
     font-size: max(1.6vw, 20px);
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
 
+.box_spacing {
+    margin: 150px auto;
+}
 /* centering the skills bullets */
 #skills_bullets_wrapper{
     display: -webkit-box;
@@ -269,7 +247,6 @@ to {opacity: 0.0};
     width: 50%;
     background-color:#17252A;
     border-radius: 10px;
-    margin: 3% auto;
     text-align: center;
     color: white;
 }
