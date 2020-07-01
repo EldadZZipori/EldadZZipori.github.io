@@ -1,0 +1,5 @@
+{ 
+    "data_name":"This site", 
+    "description":"I build this site to put myself out there. It is intentionly build in Vanila JS, it is fully responsive and uses some libraries I found online and fixed. The animation are in Rive(Flare) which is 3D animation framework. The whole project is on github pages, and SCM managed on github. The development enviroment is set on two computers which use MAMP to run the site localy.", 
+    "pictures":["tscode.png","tsprewview.png","tstech.png"]
+}

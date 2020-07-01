@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Home Build Lab",
+        "desc": "Self build electonics lab from used computers and ebay circutes",
+        "cat":"Electonics",
+        "data":"home_lab"
+    },
+    {
+        "name":"Atid Aprovals",
+        "desc": "High school final project in Android, Final score: 100",
+        "cat": "Programming",
+        "data": "atid_aprovals",
+        "pic": "aplogo.png"
+        
+    },
+    {
+        "name": "This site",
+        "desc": "This site was self build from scrach",
+        "cat": "Programming",
+        "data": "this_site",
+        "pic": "tslogo.png"
+    }
+
+]

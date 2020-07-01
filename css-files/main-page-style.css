@@ -110,20 +110,6 @@ nav .sidenav-trigger i {
     
 }
 
-/*.flex_container{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 50%;
-    height: 100%;
-    margin-top: 10px;
-}*/
-
-
 .skills_bullets_buble_wrapper{
     padding: 1rem;
     width: 25%;
@@ -164,7 +150,8 @@ nav .sidenav-trigger i {
 }
 .skills_bullets{
     display: block;
-   width: 100%;
+   width: 70%;
+   margin: 0 auto;
 }
 
 

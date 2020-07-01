@@ -87,7 +87,7 @@ function modalOpen(_This) {
       ob["pictures"].forEach(element => {
         slideshow.innerHTML+= `
         <div class="mySlides fade">
-           <img src="http://localhost/${element}" style="width:100%">
+           <img src="static/pictures/${element}" class="modal_image">
         </div>
         `;
         
@@ -100,7 +100,7 @@ function modalOpen(_This) {
     }
   };
 
-  xhttp.open("GET", `static/${_This.getAttribute("data")}.json`, true);
+  xhttp.open("GET", `static/json/${_This.getAttribute("data")}.json`, true);
   xhttp.send();
 }
 
@@ -144,7 +144,7 @@ function ready() {
         gallery.innerHTML += `
         <div class="galleryColumn ${element['cat']} fade">
           <div data="${element['data']}" class="galleryContent" onclick="modalOpen(this)">
-            <img src="http://localhost/${element['pic']}" alt="" style="width: 100%" />
+            <img class="present_image" src="/static/pictures/${element['pic']}" alt="" />
             <h4>${element['name']}</h4>
             <p>${element['desc']}</p>
           </div>
@@ -155,7 +155,7 @@ function ready() {
     };
   };
 
-  xhttp.open("GET", `static/protfolio_list.json`, true);
+  xhttp.open("GET", `static/json/protfolio_list.json`, true);
   xhttp.send();
  
     

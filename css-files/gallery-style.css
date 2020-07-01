@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
+.present_image{
+  height: 15vw;
+  margin: 0 auto;
+  display: inherit;
+}
 body {
     padding: 0px;
     margin: 8px !important;
@@ -22,18 +26,24 @@ nav > div > ul {
 }
 nav > div > ul  > li {
   position: relative;
+  width: 100px;
+  text-align: center;
+}
+nav ul a {
+  padding: 0 !important;
 }
 nav > div > ul > li::after {
   content: "";
   width: 1px;
   display: block;
   position: absolute;
-  height: 68px;
-  top:5.5px;
-  opacity: 0.8;
+  height: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.5;
   color: white;
   background-color: white;
-  right: 0;
+  right: -1px;
 }
 nav .sidenav-trigger i {
   height: 80px !important;
@@ -68,7 +78,7 @@ h2 {
 /* Creates three equal columns that floats next to each other */
 .galleryColumn {
     float: left;
-    width: 33.33%;
+    width: 25%;
     display: none /* hides columns by default */
 }
 
@@ -84,6 +94,7 @@ h2 {
     background-color: white;
     padding: 10px;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* show class for filtered elements */
@@ -115,7 +126,6 @@ h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -138,6 +148,13 @@ h2 {
 #modal > div > h2 {
   font-size: 34px;
   font-size: max(2vw, 34px);
+  color: black;
+}
+.modal_image {
+  height: 50vh;
+  margin: 0 auto;
+  display: inherit;
+
 }
 .completed {
     background-color: rgb(34, 235, 34);
