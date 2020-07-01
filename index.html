@@ -14,7 +14,7 @@
         
         <link rel="stylesheet" href="/css-files/main-page-style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         
         <!-- Rive-Flare Scripts -->
         <script src="/dependencies/rive-build/Flare.min.js"></script>
@@ -58,14 +58,15 @@
 
         
         <!-- Top image box -->
-        <div class="top_box box_spacing" id="main_background" style="visibility: hidden;">
+        <div class="top_box box_spacing" id="main_background" data-aos="fade-up" data-aos-duration="1000">
                 <p>Today's world needs people Not just "Programmers" or "Engineers".<br> I invite you to explore my life and my various interests.<br> Not only Technology but topics from Management to Humanities.<br><b>You and your company need a round character.</b></p>
         </div>
         
         <!-- Contains the bubles/ bullets of expertice and topcis of intersts / skills -->
+        <div class="scroll_view">
         <div id="skills_bullets_wrapper">
             <!--<div class="flex_container">-->
-                <div class="skills_bullets_buble_wrapper">
+                <div class="skills_bullets_buble_wrapper" data-aos="fade-down" data-aos-duration="1000">
                     <div class="skills_content">
                     <!--<span class="tooltiptext"><span>Programing</span></span>-->
                     <canvas id="ProgramingCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
@@ -77,7 +78,7 @@
                     <a href="#">Learn More</a>
                 </div>
                 </div>
-                <div class="skills_bullets_buble_wrapper">
+                <div class="skills_bullets_buble_wrapper" data-aos="fade-down" data-aos-duration="2000">
                     <div class="skills_content">
                    <!--<span class="tooltiptext"><span>Electronics</span></span>-->
                     <canvas id="ElectronicsCanvas" class="skills_bullets" id="second_circle"style="visibility: hidden;"></canvas>
@@ -91,7 +92,7 @@
             </div>
            <!-- </div>-->
            <!--  <div class="flex_container">-->
-                <div class="skills_bullets_buble_wrapper">
+                <div class="skills_bullets_buble_wrapper" data-aos="fade-up" data-aos-duration="1000">
                     <div class="skills_content">
                     <!--<span class="tooltiptext"><span>Managment</span></span>-->
                     <canvas id="ManagmentCanvas" class="skills_bullets" style="visibility: hidden;"></canvas>
@@ -102,7 +103,7 @@
                     <a href="#">Learn More</a>
                 </div>
                 </div>
-                <div class="skills_bullets_buble_wrapper" >
+                <div class="skills_bullets_buble_wrapper" data-aos="fade-up" data-aos-duration="2000">
                     <div class="skills_content">
                     <!--<span class="tooltiptext"><span>Much More</span></span>-->
                     <canvas id ="MuchMorecanvas" class="skills_bullets" style="visibility: hidden;" data="0"></canvas>
@@ -116,9 +117,12 @@
                 </div>
            <!--  </div>-->
         </div>
+    </div>
          
-        <!-- Profile information box --> 
-        <div id="profile_box" class="box_spacing">
+        <!-- Profile information box -->
+        <div  class="scroll_view" >
+            <div>
+        <div id="profile_box" class="box_spacing" data-aos="flip-left"  data-aos-duration="3000" >
             <!-- All the text in the profile information -->   
             <div class="profile_box_item">
                 <h4>Eldad Zeev Zipori</h3>
@@ -135,17 +139,22 @@
                 </span>
                     </div>
             </div>
-            <div class="profile_box_item" >
+            <div class="profile_box_item"  >
                     <a target="_blank" href="https://github.com/EldadZZipori"><img src="/static/github_logo.png"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/eldad-zipori-a411a5157"><img src="/static/linkedin_logo.png"></a>
                     <a target="_blank"  href="https://api.whatsapp.com/send?phone=972543100725&text=Hey%20Eldad,"><img id="whatsapp"src="/static/whatsapplogo.png" ></a>
             </div>
         </div>
+    </div>
+    </div> 
             
         
          
         <script src="/javascript-files/main-page-script.js"></script>
-        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({mirror: true});
+        </script>
         
     </body>
 </html>

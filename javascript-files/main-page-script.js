@@ -46,7 +46,7 @@ var LoadRives = function LoadRives() {
     var current_rive = new RivePlayer(current_element, function () {
       current_rive.load(item.remote_url, function (error) {
         current_element.setAttribute("style", "");
-        current_element.className += " getMoreSmaller";
+        //current_element.className += " getMoreSmaller";
 
         if (error) {
           console.log("failed to load actor file...", error);
@@ -65,7 +65,7 @@ ready(function () {
   var elems = document.querySelectorAll('.sidenav');
   var instances = M.Sidenav.init(elems, {}); 
 
-  document.getElementById("main_background").className += " getSmaller";
+  //document.getElementById("main_background").className += " getSmaller";
 
   document.querySelectorAll(".skills_bullets_buble_wrapper").forEach(function (element) {
     element.addEventListener("mouseover", function (e) {
