@@ -4,7 +4,7 @@
         "desc": "Self build electonics lab from used computers and ebay circutes.",
         "cat":"Electonics",
         "data":"home_lab",
-        "pic":"hllogo.jpg"
+        "pic":"hllogo.JPG"
     },
     {
         "name":"Atid Aprovals",
@@ -26,35 +26,35 @@
         "desc": "Big project which includes electonics, programming ,3D design.",
         "cat": "Programming Electonics",
         "data": "smart_garden",
-        "pic": "sglogo.jpg"
+        "pic": "sglogo.JPG"
     },
     {
         "name": "Garden Lights Fixing",
         "desc": "Found out that my new house has garden light, I decided to fix their electricity.",
         "cat": "Electonics",
         "data": "gl_fixing",
-        "pic": "glpic.jpg"
+        "pic": "glpic.JPG"
     },
     {
         "name": "Ongoing Project",
         "desc": "Ongoing Project web application project with <a href='https://lp.webizzart.com/adi/'>Adi Levi</a>. ",
         "cat": "Programming",
         "data": "on_going",
-        "pic": "oglogo.jpg"
+        "pic": "oglogo.JPG"
     },
     {
         "name": "Devops Project",
         "desc": "In progress devops course to summerize all the technologies tought in a Devops Course.",
         "cat": "Programming",
         "data": "dev_pro",
-        "pic": "dologo.jpg"
+        "pic": "dologo.JPG"
     },
     {
         "name": "3D Printing",
         "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
         "cat": "MuchMore Electronics",
         "data": "td_printing",
-        "pic": "tdplogo.jpg"
+        "pic": "tdplogo.JPG"
     },
     {
         "name": "Playing The Piano",
@@ -69,14 +69,14 @@
         "desc": "Wood working, building a composet and using it to grow a graden.",
         "cat": "MuchMore",
         "data": "garden",
-        "pic": "glogo.jpg"
+        "pic": "glogo.JPG"
     },
     {
         "name": "Switch Your Head",
         "desc": "Cars Mechnics course for amaturs.",
         "cat":"MuchMore",
         "data":"switch_head",
-        "pic":"shlogo.jpg"
+        "pic":"shlogo.JPG"
     }
 
 
