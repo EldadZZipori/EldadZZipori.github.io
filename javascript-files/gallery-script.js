@@ -28,6 +28,7 @@ function showSlides(n) {
 } 
 
 function filterSelection(selection) {
+  
   let columns, i;
   columns = document.getElementsByClassName("galleryColumn");
   if (selection == "all") selection = "";
@@ -110,6 +111,11 @@ function shuffleArray(array) {
 }
 
 function ready() {
+  const url = window.location.search;
+  const urlParams = new URLSearchParams(url);
+  const q = urlParams.get('q');
+
+
   var elems = document.querySelectorAll('.sidenav');
   var instances = M.Sidenav.init(elems, {});
   
@@ -156,7 +162,26 @@ function ready() {
         </div>`
       
       });
-      filterSelection("all"); // Execute the function to show all columns
+      if (q != null){
+        switch(q){
+          case 'p':
+            filterSelection("Programming");
+            document.getElementById("Programming").className += " Gactive";
+            break;
+          case 'e':
+            filterSelection("Electonics");
+            document.getElementById("Electonics").className += " Gactive";
+            break;
+          case 'm':
+            filterSelection("MuchMore");
+            document.getElementById("MuchMore").className += " Gactive";
+            break;
+          default:
+              filterSelection("all");
+              document.getElementById("all").className += " Gactive";
+            
+        }
+      }
     };
   };
 
