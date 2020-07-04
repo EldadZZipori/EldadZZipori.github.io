@@ -120,13 +120,13 @@ function detectswipe(el) {
   ele = document.getElementById(el);
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
-    swipe_det.sX = -t.screenX; 
+    swipe_det.sX = t.screenX; 
     swipe_det.sY = t.screenY;
   },false);
   ele.addEventListener('touchmove',function(e){
     e.preventDefault();
     var t = e.touches[0];
-    swipe_det.eX = -t.screenX; 
+    swipe_det.eX = t.screenX; 
     swipe_det.eY = t.screenY;    
   },false);
   ele.addEventListener('touchend',function(e){
