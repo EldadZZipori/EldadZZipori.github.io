@@ -120,7 +120,7 @@ function detectswipe(el) {
   ele = document.getElementById(el);
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
-    swipe_det.sX = t.screenX; 
+    swipe_det.sX = -t.screenX; 
     swipe_det.sY = t.screenY;
   },false);
   ele.addEventListener('touchmove',function(e){
@@ -132,7 +132,7 @@ function detectswipe(el) {
   ele.addEventListener('touchend',function(e){
     //horizontal detection
     if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y) && (swipe_det.eX > 0)))) {
-      if(swipe_det.eX > swipe_det.sX)plusSlides(1);
+      if(swipe_det.eX > swipe_det.sX) plusSlides(1);
       else plusSlides(-1);
     }
     //vertical detection
