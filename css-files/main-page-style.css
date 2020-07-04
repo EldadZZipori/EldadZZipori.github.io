@@ -103,7 +103,7 @@ nav .sidenav-trigger i {
 
 .top_box  > p {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 80px);
     left: 50%;
     width: 75%;
     transform: translate(-50%,-50%);
