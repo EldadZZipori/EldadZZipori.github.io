@@ -123,26 +123,7 @@ function ready() {
 
   var btnContainer = document.getElementById("buttonContainer");
   var btns = btnContainer.getElementsByClassName("Gbtn");
-  if (q != null){
-    switch(q){
-      case 'p':
-        filterSelection("Programming");
-        document.getElementById("Programming").className += " Gactive";
-        break;
-      case 'e':
-        filterSelection("Electonics");
-        document.getElementById("Electonics").className += " Gactive";
-        break;
-      case 'm':
-        filterSelection("MuchMore");
-        document.getElementById("MuchMore").className += " Gactive";
-        break;
-      default:
-          filterSelection("all");
-          document.getElementById("all").className += " Gactive";
-        
-    }
-  }
+  
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
       var current = document.getElementsByClassName("Gactive");
@@ -181,7 +162,29 @@ function ready() {
         </div>`
       
       });
-      
+      if (q != null){
+        switch(q){
+          case 'p':
+            filterSelection("Programming");
+            document.getElementById("Programming").className += " Gactive";
+            break;
+          case 'e':
+            filterSelection("Electonics");
+            document.getElementById("Electonics").className += " Gactive";
+            break;
+          case 'm':
+            filterSelection("MuchMore");
+            document.getElementById("MuchMore").className += " Gactive";
+            break;
+          default:
+            filterSelection("all");
+            document.getElementById("all").className += " Gactive";
+            
+        }
+      } else {
+        filterSelection("all");
+        document.getElementById("all").className += " Gactive";
+      }
     };
   };
 
