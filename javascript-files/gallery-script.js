@@ -31,7 +31,6 @@ function filterSelection(selection) {
   let columns, i;
   columns = document.getElementsByClassName("galleryColumn");
   if (selection == "all") selection = "";
-  console.log(columns.length); // Adding the show class to the filtered elements and removes show class from element who are not selected
 
   for (i = 0; i < columns.length; i++) {
     removeClass(columns[i], 'show');
@@ -54,7 +53,7 @@ function addClass(element, name) {
 
 
 function removeClass(element, name) {
-  console.log("In of removeClass");
+
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -66,7 +65,6 @@ function removeClass(element, name) {
   }
 
   element.className = arr1.join(" ");
-  console.log("Out of removeClass");
 } // function for opening the modal
 
 
@@ -75,7 +73,6 @@ function modalOpen(_This) {
 
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4) {
-      console.log(this.responseText.toString());
       var ob = JSON.parse(this.responseText.toString());
       document.querySelector("#modal > div > h2").innerHTML = ob["data_name"];
       document.querySelector("#modal > div > p").innerHTML = ob["description"];
@@ -102,6 +99,14 @@ function modalOpen(_This) {
 
   xhttp.open("GET", `static/json/${_This.getAttribute("data")}.json`, true);
   xhttp.send();
+}
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
 }
 
 function ready() {
@@ -139,8 +144,8 @@ function ready() {
     if (this.readyState == 4) {
       var gallery = document.getElementsByClassName("galleryRows")[0];
       var ob = JSON.parse(this.responseText.toString());
+      //shuffleArray(ob);
       ob.forEach(element => {
-        console.log(element);
         gallery.innerHTML += `
         <div class="galleryColumn ${element['cat']} fade">
           <div data="${element['data']}" class="galleryContent" onclick="modalOpen(this)">

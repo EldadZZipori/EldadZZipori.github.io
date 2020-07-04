@@ -30,14 +30,12 @@ ready(function(){
   var instances = M.Sidenav.init(elems, {}); 
 
   var previosWidth = window.innerWidth;
-  
-  window.onresize = function () {
+  window.addEventListener("resize",function () {
     if (window.innerWidth < 769 && window.innerWidth < previosWidth) {
-      console.log("refresh");
-      location.reload();
-    } else if (window.innerWidth > 769 && window.innerHeight > previosWidth) {
-      location.reload("refresh");
+      window.location.href = window.location.href;
+    } else if (window.innerWidth > 769 && window.innerWidth > previosWidth) {
+      window.location.href = window.location.href;
     }
-  };
+  });
   
 })

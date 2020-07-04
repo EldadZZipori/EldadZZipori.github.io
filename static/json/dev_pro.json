@@ -1,0 +1,5 @@
+{ 
+    "data_name":"Devops Project", 
+    "description":"An ongoing devopes project to summerize all the material learned at a Devops Course. The project includes the following technologies: <ul style='list-style-type:disc'><li>Python, Selenium, Flask</li><li>Dockers</li><li>Jenkins</li><li>Git and GitHub</li><ul/> Projects GitHub <a href='https://github.com/EldadZZipori/WoG-Devops_course_project'>Link</a> ", 
+    "pictures":["dopic1.png","dopic2.png","dopic3.png"]
+}

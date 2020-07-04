@@ -3,6 +3,7 @@
 }
 .present_image{
   height: 15vw;
+  max-width: 100%;
   margin: 0 auto;
   display: inherit;
 }
@@ -66,7 +67,7 @@ h2 {
 }
 
 .galleryRows {
-    margin: 8px -16px;
+    margin: 8px -8px;
 }
 
 /* padding between each column */
@@ -74,7 +75,24 @@ h2 {
 .galleryRows > .galleryColumn {
     padding: 8px;
 }
-
+@media (min-width:100px) and (max-width: 797px) {
+  .galleryColumn {
+    width: 100% !important;
+  }
+  .present_image {
+    height: initial;
+    width: 75%;
+  }
+  .modal_image{
+    height: initial !important;
+    width: 100%;
+    
+  }
+  #modal > div {
+    width: 95% !important;
+    overflow-y: scroll;
+  }
+}
 /* Creates three equal columns that floats next to each other */
 .galleryColumn {
     float: left;
@@ -91,6 +109,7 @@ h2 {
 
 /* Content style */
 .galleryContent {
+    min-height: ;
     background-color: white;
     padding: 10px;
     cursor: pointer;
@@ -127,6 +146,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
 }
 
 #modal > div {
@@ -151,7 +171,7 @@ h2 {
   color: black;
 }
 .modal_image {
-  height: 50vh;
+  max-width: 100%;
   margin: 0 auto;
   display: inherit;
 

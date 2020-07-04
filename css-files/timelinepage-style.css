@@ -9,7 +9,7 @@
 html,
 body
  {
-  height: 100%;
+  height:100vh;
   width: 100%;
 }
 body {
@@ -259,6 +259,7 @@ nav .sidenav-trigger i {
 }
 .timeline .swiper-button-next,
 .timeline .swiper-button-prev {
+  display: none;
   background-size: 20px 20px;
   top: 15%;
   width: 20px;
@@ -287,9 +288,14 @@ nav .sidenav-trigger i {
           -ms-transform: translateX(3px);
       transform: translateX(3px);
 }
+
 @media (min-width: 100px) and (max-width: 768px){
   .timeline .swiper-container {
         height:100%;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+      display: block !important;
     }
 }
 
@@ -326,7 +332,8 @@ nav .sidenav-trigger i {
     display: flex;
   }
   .timeline .swiper-button-prev {
-    bottom: 0;
+    
+    top: 20%;
     left: auto;
     right: 16.5%;
     -webkit-transform: rotate(90deg) translate(0, 10px);

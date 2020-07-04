@@ -1,13 +1,14 @@
 [
     {
         "name": "Home Build Lab",
-        "desc": "Self build electonics lab from used computers and ebay circutes",
+        "desc": "Self build electonics lab from used computers and ebay circutes.",
         "cat":"Electonics",
-        "data":"home_lab"
+        "data":"home_lab",
+        "pic":"hllogo.jpg"
     },
     {
         "name":"Atid Aprovals",
-        "desc": "High school final project in Android, Final score: 100",
+        "desc": "High school final project in Android, Final score: 100.",
         "cat": "Programming",
         "data": "atid_aprovals",
         "pic": "aplogo.png"
@@ -15,10 +16,68 @@
     },
     {
         "name": "This site",
-        "desc": "This site was self build from scrach",
+        "desc": "This site was self build from scrach.",
         "cat": "Programming",
         "data": "this_site",
         "pic": "tslogo.png"
+    },
+    {
+        "name": "Smart Garden",
+        "desc": "Big project which includes electonics, programming ,3D design.",
+        "cat": "Programming Electonics",
+        "data": "smart_garden",
+        "pic": "sglogo.jpg"
+    },
+    {
+        "name": "Garden Lights Fixing",
+        "desc": "Found out that my new house has garden light, I decided to fix their electricity.",
+        "cat": "Electonics",
+        "data": "gl_fixing",
+        "pic": "glpic.jpg"
+    },
+    {
+        "name": "Ongoing Project",
+        "desc": "Ongoing Project web application project with <a href='https://lp.webizzart.com/adi/'>Adi Levi</a>. ",
+        "cat": "Programming",
+        "data": "on_going",
+        "pic": "oglogo.jpg"
+    },
+    {
+        "name": "Devops Project",
+        "desc": "In progress devops course to summerize all the technologies tought in a Devops Course.",
+        "cat": "Programming",
+        "data": "dev_pro",
+        "pic": "dologo.jpg"
+    },
+    {
+        "name": "3D Printing",
+        "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
+        "cat": "MuchMore Electronics",
+        "data": "td_printing",
+        "pic": "tdplogo.jpg"
+    },
+    {
+        "name": "Playing The Piano",
+        "desc": "Playing the piano for more than 5 years.",
+        "cat": "MuchMore",
+        "data": "p_playing",
+        "pic": ""
+    },
+    
+    {
+        "name": "Compost and Garden Build",
+        "desc": "Wood working, building a composet and using it to grow a graden.",
+        "cat": "MuchMore",
+        "data": "garden",
+        "pic": "glogo.jpg"
+    },
+    {
+        "name": "Switch Your Head",
+        "desc": "Cars Mechnics course for amaturs.",
+        "cat":"MuchMore",
+        "data":"switch_head",
+        "pic":"shlogo.jpg"
     }
+
 
 ]
