@@ -1,5 +1,5 @@
 { 
     "data_name":"3D Design and Printing", 
     "description":"After some time of thinking about it I decided to try 3D modeling even thought I was never an artistic person. I took a Udemy course in Solidworks and after some time of playing and modeling with it I decided to by the Ender 3. I build an enclosure for it, replaced the nozzle to an all metal swizz nozzel, and the heatting bed. The printer now prints PETG, ABS and practicly every material out there.<br/> <b>The second picture here is one of my first prints. It is Gandelf's Staff From lord of the ring printed with wood fabric PLA and I add LED lights with a control button.</b>", 
-    "pictures":["tdpdesign.png","tdpgandelf.JPG","tdpdraw.JPG"]
+    "pictures":["tdpdesign.png","tdpgandelf.jpg","tdpdraw.JPG"]
 }
