@@ -2,6 +2,7 @@
 
 var slideIndex = 1;
 var swipe_det, ele;
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -11,6 +12,20 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+function UpdateCardsHeight(isMobile){
+  var longest_element_height;
+  if (!isMobile){
+
+    document.getElementById('garden').style.setProperty('height',"initial");
+     longest_element_height = document.getElementById('garden').clientHeight + "px";
+  } else {
+    longest_element_height ="initial";
+  }
+ 
+      Array.prototype.forEach.call(document.getElementsByClassName('galleryContent'), function(el) {
+        el.style.setProperty('height',longest_element_height);
+      });
+}
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -192,16 +207,19 @@ function ready() {
       var ob = JSON.parse(this.responseText.toString());
       //shuffleArray(ob);
       ob.forEach(element => {
-        gallery.innerHTML += `
-        <div class="galleryColumn ${element['cat']} fade">
-          <div data="${element['data']}" class="galleryContent" onclick="modalOpen(this)">
-            <img class="present_image" src="/static/pictures/${element['pic']}" alt="" />
-            <h4>${element['name']}</h4>
-            <p>${element['desc']}</p>
+        var cur_element = document.createElement("div");
+        cur_element.className += `galleryColumn ${element['cat']} fade`;
+        cur_element.innerHTML = `
+          <div id="${element['data']}" data="${element['data']}" class="galleryContent" onclick="modalOpen(this)">
+              <img class="present_image" src="/static/pictures/${element['pic']}" alt="" />
+              <h4>${element['name']}</h4>
+              <p>${element['desc']}</p>
           </div>
-        </div>`
-      
+        `;
+        gallery.appendChild(cur_element);
+       
       });
+      
       if (q != null){
         switch(q){
           case 'p':
@@ -225,6 +243,15 @@ function ready() {
         filterSelection("all");
         document.getElementById("all").className += " Gactive";
       }
+      
+      if (window.innerWidth > 797){
+        UpdateCardsHeight(false);
+      }
+      
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 797) UpdateCardsHeight(false);
+        else UpdateCardsHeight(true)
+      })
     };
   };
 
