@@ -52,14 +52,14 @@
     {
         "name": "3D Printing",
         "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
-        "cat": "MuchMore Electronics",
+        "cat": "Hobbies Electronics",
         "data": "td_printing",
         "pic": "tdplogo.jpg"
     },
     {
         "name": "Playing The Piano",
         "desc": "Playing the piano for more than 5 years.",
-        "cat": "MuchMore",
+        "cat": "Hobbies",
         "data": "p_playing",
         "pic": "pplogo.JPG"
     },
@@ -67,14 +67,14 @@
     {
         "name": "Compost and Garden Build",
         "desc": "Wood working, building a composet and using it to grow a graden.",
-        "cat": "MuchMore",
+        "cat": "Hobbies",
         "data": "garden",
         "pic": "glogo.JPG"
     },
     {
         "name": "Switch Your Head",
-        "desc": "Cars Mechnics course for amaturs.",
-        "cat":"MuchMore",
+        "desc": "Cars Mechanics course for amateurs.",
+        "cat":"Hobbies",
         "data":"switch_head",
         "pic":"shlogo.jpg"
     }
