@@ -16,7 +16,7 @@
     },
     {
         "name": "This site",
-        "desc": "This site was self build from scrach.",
+        "desc": "This site was self build from scratch in vanilla JS.",
         "cat": "Programming",
         "data": "this_site",
         "pic": "tslogo.png"
