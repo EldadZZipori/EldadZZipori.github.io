@@ -231,8 +231,8 @@ function ready() {
             document.getElementById("Electonics").className += " Gactive";
             break;
           case 'm':
-            filterSelection("MuchMore");
-            document.getElementById("MuchMore").className += " Gactive";
+            filterSelection("Hobbies");
+            document.getElementById("Hobbies").className += " Gactive";
             break;
           default:
             filterSelection("all");
