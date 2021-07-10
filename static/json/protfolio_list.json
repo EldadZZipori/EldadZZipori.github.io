@@ -13,13 +13,12 @@
         "data":"mars_colony",
         "pic":"mars.png"
     },
-    {
-        "name":"Atid Aprovals",
-        "desc": "High school final project in Android, Final score: 100(A+).",
-        "cat": "Programming",
-        "data": "atid_aprovals",
-        "pic": "aplogo.png"
-        
+        {
+        "name": "3D Printing",
+        "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
+        "cat": "Electonics",
+        "data": "td_printing",
+        "pic": "tdplogo.jpg"
     },
     {
         "name": "This site",
@@ -34,6 +33,14 @@
         "cat": "Programming Electonics",
         "data": "smart_garden",
         "pic": "sglogo.JPG"
+    },
+    {
+        "name":"Atid Aprovals",
+        "desc": "High school final project in Android, Final score: 100(A+).",
+        "cat": "Programming",
+        "data": "atid_aprovals",
+        "pic": "aplogo.png"
+        
     },
     {
         "name": "Garden Lights Fixing",
@@ -55,13 +62,6 @@
         "cat": "Programming",
         "data": "dev_pro",
         "pic": "dologo.jpg"
-    },
-    {
-        "name": "3D Printing",
-        "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
-        "cat": "Electonics",
-        "data": "td_printing",
-        "pic": "tdplogo.jpg"
     },
     {
         "name": "Playing The Piano",
