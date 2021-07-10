@@ -7,6 +7,13 @@
         "pic":"hllogo.JPG"
     },
     {
+        "name": "Mars Colony",
+        "desc": "UBCs Mars Colony Design Team",
+        "cat":"Electonics",
+        "data":"mars_colony",
+        "pic":"mars.JPG"
+    },
+    {
         "name":"Atid Aprovals",
         "desc": "High school final project in Android, Final score: 100(A+).",
         "cat": "Programming",
