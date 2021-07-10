@@ -44,7 +44,7 @@
     },
     {
         "name": "Devops Project",
-        "desc": "In progress devops course to summerize all the technologies tought in a Devops Course.",
+        "desc": "A small devops project to summerize all the technologies I learned in a Devops Course.",
         "cat": "Programming",
         "data": "dev_pro",
         "pic": "dologo.jpg"
