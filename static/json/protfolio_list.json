@@ -1,7 +1,7 @@
 [
     {
         "name": "Home Build Lab",
-        "desc": "Self build electonics lab from used computers and ebay circutes.",
+        "desc": "Self build electonics lab from used computers, ebay circutes, and 3D prints.",
         "cat":"Electonics",
         "data":"home_lab",
         "pic":"hllogo.JPG"
