@@ -30,7 +30,7 @@
     },
     {
         "name": "Garden Lights Fixing",
-        "desc": "Found out that my new house has garden light, I decided to fix their electricity.",
+        "desc": "My parents amazing garden light did not work and cause blackouts in their new house. So I took my multimeter and fixed the lighting",
         "cat": "Electonics",
         "data": "gl_fixing",
         "pic": "glpic.JPG"
