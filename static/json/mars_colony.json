@@ -1,5 +1,5 @@
 { 
     "data_name":"Mars Colony", 
     "description":"Member of the Electrical sub-team in the Mars Colony Design team at UBC. Currently working on the Sabatier Reactor. In the team I have learned how to use Altium designer and PCB design and contibuted to the team's research on starting vials, shift registers, and relay boards.<br/><a href='https://ubcmarscolony.wordpress.com/'>Mars Colony Design Team Web Site</a>", 
-    "pictures":["shift.png","PCB.png","mfc.png"]
+    "pictures":["control.jpeg","PCB.png","mfc.png"]
 }
