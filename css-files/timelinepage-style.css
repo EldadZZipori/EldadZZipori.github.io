@@ -60,7 +60,9 @@ nav .sidenav-trigger i {
   top: 2px;
   height:75px;
 }
-
+.swiper-container-vertical > .swiper-pagination-bullets {
+  left: 10px;
+}
 
 .swiper_container_wrapper {
     margin-top: 0px;
@@ -118,7 +120,7 @@ nav .sidenav-trigger i {
   content: "";
   position: absolute;
   z-index: 1;
-  right: -115%;
+  left: -115%;
   bottom: -10%;
   width: 100%;
   height: 100%;
@@ -129,10 +131,10 @@ nav .sidenav-trigger i {
 }
 .timeline .swiper-slide-content {
   position: absolute;
-  text-align: center;
+  text-align: left;
   width: 80%;
   max-width: 310px;
-  right: 50%;
+  left: 50%;
   top: 13%;
   -webkit-transform: translate(50%, 0);
           -ms-transform: translate(50%, 0);
@@ -199,7 +201,7 @@ nav .sidenav-trigger i {
   transition: .4s ease 1.8s;
 }
 .timeline .swiper-pagination {
-  right: 15% !important;
+  left: 15% !important;
   height: 100%;
   display: none;
   -webkit-box-orient: vertical;
@@ -301,7 +303,7 @@ nav .sidenav-trigger i {
 
 @media screen and (min-width: 768px) {
   .timeline .swiper-slide::after {
-    right: -30%;
+    left: -30%;
     bottom: -8%;
     width: 240px;
     height: 100%;
@@ -309,14 +311,14 @@ nav .sidenav-trigger i {
             box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
   }
   .timeline .swiper-slide-content {
-    right: 35%;
+    left: 35%;
     top: 50%;
     -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     width: 310px;
     font-size: 15px;
-    text-align: right;
+    text-align: left;
   }
   .timeline .swiper-slide .timeline-year {
     margin-bottom: 0;
@@ -362,7 +364,7 @@ nav .sidenav-trigger i {
 @media screen and (min-width: 1024px) {
 
   .timeline .swiper-slide::after {
-    right: -20%;
+    left: -20%;
     bottom: -12%;
     width: 240px;
     height: 100%;
@@ -371,6 +373,6 @@ nav .sidenav-trigger i {
     box-shadow: -230px 0 150px 45vw rgba(0, 0, 0, 0.7);
   }
   .timeline .swiper-slide-content {
-    right: 30%;
+    left: 30%;
   }
 }
