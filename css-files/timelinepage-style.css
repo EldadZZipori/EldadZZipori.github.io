@@ -60,8 +60,8 @@ nav .sidenav-trigger i {
   top: 2px;
   height:75px;
 }
-.swiper-container-vertical > .swiper-pagination-bullets {
-  left: 10px;
+.swiper-pagination-bullets {
+  right: inherit !important;
 }
 
 .swiper_container_wrapper {
