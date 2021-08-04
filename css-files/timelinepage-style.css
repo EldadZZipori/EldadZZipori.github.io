@@ -125,8 +125,8 @@ nav .sidenav-trigger i {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, 0.7);
-          box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 230px 0 150px 60vw rgba(0, 0, 0, 0.7);
+          box-shadow: 230px 0 150px 60vw rgba(0, 0, 0, 0.7);
   border-radius: 100%;
 }
 .timeline .swiper-slide-content {
@@ -307,8 +307,8 @@ nav .sidenav-trigger i {
     bottom: -8%;
     width: 240px;
     height: 100%;
-    -webkit-box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
-            box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+            box-shadow: 230px 0 150px 50vw rgba(0, 0, 0, 0.7);
   }
   .timeline .swiper-slide-content {
     left: 35%;
@@ -368,9 +368,9 @@ nav .sidenav-trigger i {
     bottom: -12%;
     width: 240px;
     height: 100%;
-    -webkit-box-shadow: -230px 0 150px 45vw rgba(0, 0, 0, 0.7);
-            box-shadow: -230px 0 150px 45vw rgba(0, 0, 0, 0.7);
-    box-shadow: -230px 0 150px 45vw rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 230px 0 150px 45vw rgba(0, 0, 0, 0.7);
+            box-shadow: 230px 0 150px 45vw rgba(0, 0, 0, 0.7);
+    box-shadow: 230px 0 150px 45vw rgba(0, 0, 0, 0.7);
   }
   .timeline .swiper-slide-content {
     left: 30%;
