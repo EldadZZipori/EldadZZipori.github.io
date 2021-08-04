@@ -114,6 +114,7 @@ h2 {
     padding: 10px;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
 }
 
 /* show class for filtered elements */
@@ -129,6 +130,7 @@ h2 {
     margin: 3px;
     background-color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* Add a grey background color on mouse-over */
