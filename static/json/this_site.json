@@ -1,5 +1,5 @@
 { 
     "data_name":"This site", 
-    "description":"I built this website to put myself out there. It is intentionally built in Vanilla JS, it is fully responsive and uses some external libraries that I had to fix. The animation is in Rive (Flare) which is 3D animation framework. The whole project is hosted and managed on Github (Github Pages and SCM). The development environment uses MAMP to run the site locally for testing. The site uses JSON files to enable text edits,gallery, and timeline additions without writing more code.", 
+    "description":"I built this website to put myself out there. It is intentionally built-in Vanilla JS, it is fully responsive, and uses some external libraries that I had to fix. The animation is in Rive (Flare) which is a 3D animation framework. The whole project is hosted and managed on Github (Github Pages and SCM). The development environment uses MAMP to run the site locally for testing. The site uses JSON files to enable text edits, gallery, and timeline additions without writing more code.", 
     "pictures":["tscode.png","tsprewview.png","tstech.png"]
 }
