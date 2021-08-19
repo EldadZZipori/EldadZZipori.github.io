@@ -1,5 +1,5 @@
 { 
     "data_name":"Smart Garden", 
-    "description":"One of my biggest projects. It includs wood working, 3D model design in solidworks, 3D printing, Electronics and Arduino, Python Flask, MongoDB and React JS. The makeing of this project spans over a long period of time and it is now in its final stage of development which is building the servers and client side for the Garden's Web Application. This whole project is going to be published in Github.", 
+    "description":"One of my biggest projects. It includes woodworking, 3D model design in Solidworks, 3D printing, Electronics and Arduino, Python Flask, MongoDB, and React JS. The making of this project spans over a long period and it is now in its final stage of development which is building the servers and client-side for the Garden's Web Application. This whole project is going to be published on Github.", 
     "pictures":["sgtech.png","sg_diagram.png","sgdesign.png"]
 }
