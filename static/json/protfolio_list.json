@@ -1,7 +1,7 @@
 [
     {
         "name": "Home Build Lab",
-        "desc": "Self build electonics lab from used computers, ebay circutes, and 3D prints.",
+        "desc": "Self-build electronics lab from used computers, eBay circuits, and 3D prints.",
         "cat":"Electonics",
         "data":"home_lab",
         "pic":"hllogo.JPG"
@@ -15,21 +15,21 @@
     },
         {
         "name": "3D Printing",
-        "desc": "After a month of learning how to design I got a 3D printer and started using it for project.",
+        "desc": "After a month of learning how to design in SolidWorks I got a 3D printer and started using it for projects.",
         "cat": "Electonics",
         "data": "td_printing",
         "pic": "tdplogo.jpg"
     },
     {
         "name": "This site",
-        "desc": "This site was self build from scratch in vanilla JS.",
+        "desc": "This site was self-build from scratch in vanilla JS.",
         "cat": "Programming",
         "data": "this_site",
         "pic": "tslogo.png"
     },
     {
         "name": "Smart Garden",
-        "desc": "Big project which includes electonics, programming ,3D design.",
+        "desc": "A big project which includes electronics, programming ,and 3D design.",
         "cat": "Programming Electonics",
         "data": "smart_garden",
         "pic": "sglogo.JPG"
@@ -44,21 +44,21 @@
     },
     {
         "name": "Garden Lights Fixing",
-        "desc": "My parents amazing garden light did not work and cause blackouts in their new house. So I took my multimeter and fixed the lighting",
+        "desc": "My parent's amazing garden light did not work and cause blackouts in their new house. So I took my multimeter and fixed them.",
         "cat": "Electonics",
         "data": "gl_fixing",
         "pic": "glpic.JPG"
     },
     {
         "name": "React Project",
-        "desc": "Fun React web application project with <a href='https://lp.webizzart.com/adi/'>Adi Levi</a>. ",
+        "desc": "React web application project with <a href='https://lp.webizzart.com/adi/'>Adi Levi</a>. ",
         "cat": "Programming",
         "data": "on_going",
         "pic": "oglogo.jpg"
     },
     {
         "name": "Devops Project",
-        "desc": "A small devops project to summerize all the technologies I learned in a Devops Course.",
+        "desc": "A small DevOps project to summarize all the technologies I learned in a DevOps course.",
         "cat": "Programming",
         "data": "dev_pro",
         "pic": "dologo.jpg"
@@ -73,14 +73,14 @@
     
     {
         "name": "Compost and Garden Build",
-        "desc": "Wood working, building a composet and using it to grow a graden.",
+        "desc": "Woodworking, building compost and using it to grow crops.",
         "cat": "Hobbies",
         "data": "garden",
         "pic": "glogo.JPG"
     },
     {
         "name": "Switch Your Head",
-        "desc": "Cars Mechanics course for amateurs.",
+        "desc": "Cars mechanics course for amateurs.",
         "cat":"Hobbies",
         "data":"switch_head",
         "pic":"shlogo.jpg"
